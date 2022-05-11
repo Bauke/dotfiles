@@ -9,7 +9,7 @@ export LOCAL_BIN="$HOME/.local/bin"
 export PATH="$PATH:$CARGO_BIN"
 export PATH="$PATH:$LOCAL_BIN"
 
-source "$HOME/.zsh_aliases"
+source "$HOME/.aliases.zsh"
 
 eval "$(register-python-argcomplete pipx)"
 eval "$(starship init zsh)"
