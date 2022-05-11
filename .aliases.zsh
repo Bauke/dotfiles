@@ -1,3 +1,4 @@
+alias c.="codium ."
 alias o="xdg-open"
 alias trash="gio trash"
 alias youtube-dl="yt-dlp"
