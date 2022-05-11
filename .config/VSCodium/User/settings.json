@@ -1,0 +1,170 @@
+{
+  /* VS Code editor settings. */
+  "editor.colorDecorators": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "Hasklig",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.minimap.maxColumn": 100,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+    100
+  ],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 100,
+  /* VS Code explorer settings. */
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  /* VS Code extensions settings. */
+  "extensions.ignoreRecommendations": true,
+  /* VS Code files settings. */
+  "files.associations": {
+    "*.sql": "sql"
+  },
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/__pycache__": true,
+    "**/node_modules": true,
+    "**/target": true
+  },
+  "files.insertFinalNewline": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/target/**": true
+  },
+  /* VS Code HTML settings. */
+  "html.format.wrapLineLength": 80,
+  "html.validate.styles": false,
+  /* VS Code search settings. */
+  "search.showLineNumbers": true,
+  /* VS Code TypeScript settings. */
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  /* VS Code window settings. */
+  "window.titleBarStyle": "custom",
+  /* VS Code workbench settings. */
+  "workbench.colorTheme": "Love Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  /* Extension settings. */
+  // Colorize (ID: kamikillerto.vscode-colorize).
+  "colorize.languages": [
+    "css",
+    "json",
+    "jsonc",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "sss",
+    "stylus",
+    "svg",
+    "xml"
+  ],
+  "colorize.include": [
+    "*.conf",
+    "*.ttheme"
+  ],
+  // Crates (ID: serayuzgur.crates).
+  "crates.compatibleDecorator": "✅ ${version}",
+  // Live Server (ID: ritwickdey.liveserver).
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.root": "/public",
+  "liveServer.settings.wait": 1000,
+  // Markdown Preview Enhanced (ID: shd101wyy.markdown-preview-enhanced).
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  // Python (ID: ms-python.python)
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": false,
+  "python.linting.mypyEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  // Rust (ID: rust-lang.rust).
+  "rust.clippy_preference": "on",
+  // Stylelint (ID: stylelint.vscode-stylelint)
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  // SVG Preview (ID: jock.svg)
+  "svg.preview.mode": "svg",
+  // TODO Highlight (ID: wayou.vscode-todo-highlight).
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "#41C8E5",
+      "color": "#1F1731",
+      "text": "TODO:"
+    },
+    {
+      // Useful for highlighting TODOs in Rust with its `todo!` macro.
+      "backgroundColor": "#41C8E5",
+      "color": "#1F1731",
+      "text": "todo!"
+    },
+    {
+      "backgroundColor": "#F99FB1",
+      "color": "#1F1731",
+      "text": "DEBUG:"
+    },
+    {
+      "backgroundColor": "#D2B83A",
+      "color": "#1F1731",
+      "text": "SPEC:"
+    },
+    {
+      "backgroundColor": "#96C839",
+      "color": "#1F1731",
+      "text": "NOTE:"
+    }
+  ],
+  // TODO Tree (ID: gruntfuggly.todo-tree).
+  "todo-tree.filtering.useBuiltInExcludes": "file excludes",
+  "todo-tree.highlights.enabled": false,
+  /* Language-specific overrides. */
+  "[html]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.rulers": [
+      65
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 65
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn"
+  },
+  "[xml]": {
+    "editor.wordWrap": "on"
+  }
+}
