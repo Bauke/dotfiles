@@ -1,0 +1,22 @@
+[commit]
+  gpgsign = true
+[core]
+  filemode = false
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Monokai Extended
+  navigate = true
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[user]
+  name = Bauke
+  email = me@bauke.xyz
+  signingkey = C1C0F29952BCF558
