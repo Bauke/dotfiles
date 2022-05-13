@@ -11,5 +11,8 @@ export PATH="$PATH:$LOCAL_BIN"
 
 source "$HOME/.aliases.zsh"
 
+export NVS_HOME="$HOME/.local/share/nvs"
+source "$NVS_HOME/nvs.sh"
+
 eval "$(register-python-argcomplete pipx)"
 eval "$(starship init zsh)"
