@@ -3,7 +3,7 @@ alias o="xdg-open"
 alias trash="gio trash"
 alias youtube-dl="yt-dlp"
 
-alias dotfiles="git --git-dir $HOME/.dotfiles --work-tree $HOME"
+alias dotfiles="GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME"
 alias gap="git add --patch"
 alias gd="git diff"
 alias gdc="git diff --cached"
