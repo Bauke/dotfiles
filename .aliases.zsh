@@ -1,4 +1,6 @@
 alias c.="codium ."
+alias cat="bat"
+alias ls="exa"
 alias o="xdg-open"
 alias trash="gio trash"
 alias youtube-dl="yt-dlp"
