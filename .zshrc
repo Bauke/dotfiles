@@ -10,6 +10,7 @@ export PATH="$PATH:$CARGO_BIN"
 export PATH="$PATH:$LOCAL_BIN"
 
 source "$HOME/.aliases.zsh"
+source "$HOME/.functions.zsh"
 
 export NVS_HOME="$HOME/.local/share/nvs"
 source "$NVS_HOME/nvs.sh"
