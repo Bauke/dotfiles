@@ -15,5 +15,8 @@ source "$HOME/.functions.zsh"
 export NVS_HOME="$HOME/.local/share/nvs"
 source "$NVS_HOME/nvs.sh"
 
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PATH:$PNPM_HOME"
+
 eval "$(register-python-argcomplete pipx)"
 eval "$(starship init zsh)"
