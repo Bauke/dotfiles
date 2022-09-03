@@ -11,6 +11,7 @@ export PATH="$PATH:$LOCAL_BIN"
 
 source "$HOME/.aliases.zsh"
 source "$HOME/.functions.zsh"
+source "$HOME/.zle.zsh"
 
 export NVS_HOME="$HOME/.local/share/nvs"
 source "$NVS_HOME/nvs.sh"
