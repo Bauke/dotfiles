@@ -1,0 +1,5 @@
+directory: /home/bauke/Beets/Library/
+library: /home/bauke/Beets/Beets.db
+import:
+  move: yes
+languages: en
