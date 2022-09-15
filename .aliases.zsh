@@ -3,6 +3,7 @@ alias cat="bat"
 alias ls="exa"
 alias mgs="mgitstatus"
 alias o="xdg-open"
+alias ssh="kitty +kitten ssh"
 alias trash="gio trash"
 alias youtube-dl="yt-dlp"
 
