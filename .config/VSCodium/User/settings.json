@@ -23,7 +23,8 @@
   "extensions.ignoreRecommendations": true,
   /* VS Code files settings. */
   "files.associations": {
-    "*.sql": "sql"
+    "*.sql": "sql",
+    "*.yml": "yaml"
   },
   "files.eol": "\n",
   "files.exclude": {
@@ -83,7 +84,7 @@
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   // Python (ID: ms-python.python)
   "python.formatting.provider": "black",
-  "python.languageServer": "Pylance",
+  "python.languageServer": "Jedi",
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": false,
   "python.linting.mypyEnabled": true,
@@ -135,6 +136,8 @@
   // TODO Tree (ID: gruntfuggly.todo-tree).
   "todo-tree.filtering.useBuiltInExcludes": "file excludes",
   "todo-tree.highlights.enabled": false,
+  // Redhat
+  "redhat.telemetry.enabled": false
   /* Language-specific overrides. */
   "[html]": {
     "editor.wordWrap": "on",
@@ -158,7 +161,7 @@
     "editor.tabSize": 4
   },
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.detectIndentation": false,
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
