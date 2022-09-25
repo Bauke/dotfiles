@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import re
+import subprocess
+import sys
+
+
+def main() -> None:
+    parser = create_parser()
+    args = parser.parse_args()
+
+    if os.path.isfile(args.filename):
+        if args.overwrite:
+            os.remove(args.filename)
+        else:
+            print("Target file already exists, use --overwrite to overwrite.")
+            sys.exit(1)
+
+    subprocess.run(
+        [
+            "gegl",
+            "-o",
+            args.filename,
+            "--",
+            *gegl_graph(args.height, args.width, args.text),
+        ],
+        check=True,
+    )
+
+    if not os.path.isfile(args.filename):
+        print("Something went wrong with GEGL")
+        sys.exit(1)
+
+    subprocess.run(
+        [
+            "convert",
+            args.filename,
+            "-background",
+            "transparent",
+            "-gravity",
+            "center",
+            "-extent",
+            f"{args.width}x{args.height}",
+            args.filename,
+        ],
+        check=True,
+    )
+
+    if args.clean:
+        subprocess.run(
+            [
+                "mat2",
+                "--inplace",
+                args.filename,
+            ],
+            check=True,
+        )
+
+
+def create_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Project Avatar Generator")
+    parser.add_argument(
+        "filename",
+        help="The image filename to write to.",
+    )
+    parser.add_argument(
+        "text",
+        help="The text for the project avatar.",
+    )
+    parser.add_argument(
+        "--width",
+        help="The width of the image.",
+        type=int,
+        default=256,
+    )
+    parser.add_argument(
+        "--height",
+        help="The height of the image.",
+        type=int,
+        default=256,
+    )
+    parser.add_argument(
+        "--overwrite",
+        help="Overwrite an existing image.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--clean",
+        help="Use MAT2 to clean the image.",
+        action="store_true",
+    )
+    return parser
+
+
+def gegl_graph(height: int, width: int, text: str) -> typing.List[str]:
+    graph = f"""
+gegl:text
+    string={text}
+    width={width}
+    height={height}
+    color=white
+    font=Heavitas
+    size=150
+    alignment=1
+    vertical-alignment=1
+gegl:dropshadow
+    x=0
+    y=0
+    color=black
+    opacity=1
+    grow-radius=4
+    radius=0
+gegl:long-shadow
+    angle=90
+    color=black
+    length=20
+"""
+
+    return re.sub("\s\s+", "\n", graph).strip().splitlines()
+
+
+if __name__ == "__main__":
+    main()
