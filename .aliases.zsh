@@ -1,5 +1,6 @@
 alias c.="codium ."
 alias cat="bat"
+alias icat="kitty +kitten icat"
 alias ls="exa"
 alias mgs="mgitstatus"
 alias o="xdg-open"
