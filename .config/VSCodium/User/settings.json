@@ -137,7 +137,7 @@
   "todo-tree.filtering.useBuiltInExcludes": "file excludes",
   "todo-tree.highlights.enabled": false,
   // Redhat
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
   /* Language-specific overrides. */
   "[html]": {
     "editor.wordWrap": "on",
