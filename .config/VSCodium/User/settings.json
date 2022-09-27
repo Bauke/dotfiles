@@ -167,6 +167,10 @@
     "editor.tabSize": 2,
     "editor.wordWrap": "wordWrapColumn"
   },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.formatOnSave": true
+  },
   "[xml]": {
     "editor.wordWrap": "on"
   }
