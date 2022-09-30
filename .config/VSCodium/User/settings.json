@@ -23,6 +23,7 @@
   "extensions.ignoreRecommendations": true,
   /* VS Code files settings. */
   "files.associations": {
+    "*.njk": "html",
     "*.sql": "sql",
     "*.yml": "yaml"
   },
