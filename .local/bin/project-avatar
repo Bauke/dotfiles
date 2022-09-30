@@ -25,7 +25,7 @@ def main() -> None:
             "-o",
             args.filename,
             "--",
-            *gegl_graph(args.height, args.width, args.text),
+            *gegl_graph(args.height, args.width, args.text, args.font_size),
         ],
         check=True,
     )
@@ -92,10 +92,16 @@ def create_parser() -> argparse.ArgumentParser:
         help="Use MAT2 to clean the image.",
         action="store_true",
     )
+    parser.add_argument(
+        "--font-size",
+        help="The font size to use for the text.",
+        type=int,
+        default=150,
+    )
     return parser
 
 
-def gegl_graph(height: int, width: int, text: str) -> typing.List[str]:
+def gegl_graph(height: int, width: int, text: str, font_size: int) -> typing.List[str]:
     graph = f"""
         gegl:text
             string={text}
@@ -103,7 +109,7 @@ def gegl_graph(height: int, width: int, text: str) -> typing.List[str]:
             height={height}
             color=white
             font=Heavitas
-            size=150
+            size={font_size}
             alignment=1
             vertical-alignment=1
         gegl:dropshadow
