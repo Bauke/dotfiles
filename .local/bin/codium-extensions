@@ -36,6 +36,7 @@ def main() -> None:
         with open(args.file, "w") as file:
             extensions = get_installed_extensions()
             file.writelines("\n".join(extensions))
+            file.write("\n")
             print(f"Wrote {len(extensions)} extensions to {args.file}")
 
 
