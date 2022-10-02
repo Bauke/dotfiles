@@ -15,6 +15,8 @@ alias gdc="git diff --cached"
 alias gl="git log"
 alias gls="git log --all --decorate --oneline --graph"
 alias gp="simple-git-push"
+alias gr="git remote"
+alias grv="git remote -v"
 alias gs="git status"
 
 alias clipboard-to-file="xclip -sel clip -o > $1"
