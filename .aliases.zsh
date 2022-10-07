@@ -5,6 +5,8 @@ alias ls="exa"
 alias mgs="mgitstatus"
 alias o="xdg-open"
 alias ssh="kitty +kitten ssh"
+alias tar-extract="tar -x -f"
+alias tar-list="tar -t -f"
 alias trash="gio trash"
 alias youtube-dl="yt-dlp"
 
