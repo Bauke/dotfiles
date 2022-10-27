@@ -139,6 +139,8 @@
   "todo-tree.highlights.enabled": false,
   // Redhat
   "redhat.telemetry.enabled": false,
+  // Linter XO (ID: samverschueren.linter-xo).
+  "xo.format.enable": true,
   /* Language-specific overrides. */
   "[html]": {
     "editor.wordWrap": "on",
@@ -170,6 +172,10 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.formatOnSave": true
   },
   "[xml]": {
