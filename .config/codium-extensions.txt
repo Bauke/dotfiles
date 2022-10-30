@@ -1,15 +1,9 @@
 brunnerh.insert-unicode
-foxundermoon.shell-format
 Holllo.love
-matthewpi.caddyfile-support
-ms-python.python
-ms-toolsai.jupyter
-ms-toolsai.jupyter-keymap
-ms-toolsai.jupyter-renderers
-redhat.vscode-xml
-redhat.vscode-yaml
+jock.svg
 ritwickdey.LiveServer
 rust-lang.rust-analyzer
+samverschueren.linter-xo
 serayuzgur.crates
 shd101wyy.markdown-preview-enhanced
 stylelint.vscode-stylelint
