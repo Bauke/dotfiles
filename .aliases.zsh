@@ -23,5 +23,6 @@ alias gs="git status"
 
 alias clipboard-to-file="xclip -sel clip -o > $1"
 alias file-to-clipboard="xclip -sel clip -i $1"
+alias gpg-decrypt-clipboard="xclip -sel clip -o | gpg --decrypt"
 
 alias restic-b2="source $HOME/.bauke/restic-b2-credentials.zsh && restic"
