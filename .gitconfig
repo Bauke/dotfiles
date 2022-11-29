@@ -20,3 +20,5 @@
   name = Bauke
   email = me@bauke.xyz
   signingkey = C1C0F29952BCF558
+[includeIf "gitdir:~/B3K/"]
+  path = ~/B3K/.gitconfig
