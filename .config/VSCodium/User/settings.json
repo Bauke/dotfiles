@@ -103,7 +103,19 @@
   "svg.preview.mode": "svg",
   // Linter XO (ID: samverschueren.linter-xo).
   "xo.format.enable": true,
+  "xo.validate": [
+    "astro",
+    "javascript",
+    "javascriptreact",
+    "mdx",
+    "typescript",
+    "typescriptreact"
+  ],
   /* Language-specific overrides. */
+  "[astro]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true
+  },
   "[html]": {
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -121,6 +133,12 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 65
   },
+  "[mdx]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
   "[python]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 4
@@ -137,6 +155,10 @@
     "editor.formatOnSave": true
   },
   "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.formatOnSave": true
   },
