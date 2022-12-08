@@ -8,6 +8,7 @@ $git_state\
 $git_metrics\
 $git_status\
 $package\
+$deno\
 $nodejs\
 $python\
 $rust\
@@ -21,9 +22,11 @@ $status\
 $shell\
 $character"""
 
+[deno]
+detect_extensions = ["ts"]
+
 [time]
 disabled = false
 format = '🕙[\[ $time \]]($style) '
 time_format = "%T"
 utc_time_offset = "local"
-
