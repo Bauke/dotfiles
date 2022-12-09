@@ -1,4 +1,5 @@
 brunnerh.insert-unicode
+denoland.vscode-deno
 Holllo.love
 jock.svg
 ritwickdey.LiveServer

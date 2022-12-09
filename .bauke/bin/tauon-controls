@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-net="127.0.0.1:7813,127.0.0.1:7814" \
+  "$BAUKE_DIR/scripts/tauon-controls.ts" \
+  "$@"

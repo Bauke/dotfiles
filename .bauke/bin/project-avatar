@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-run="convert,gegl,mat2" \
+  --allow-read \
+  --allow-write \
+  "$BAUKE_DIR/scripts/project-avatar.ts" \
+  "$@"

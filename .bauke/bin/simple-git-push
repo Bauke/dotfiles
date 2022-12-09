@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-run="git" \
+  "$BAUKE_DIR/scripts/simple-git-push.ts" \
+  "$@"

@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+codium_extensions_file="$BAUKE_DIR/data/codium-extensions.txt"
+
+deno run \
+  --allow-read="$codium_extensions_file" \
+  --allow-run="codium" \
+  --allow-write="$codium_extensions_file" \
+  "$BAUKE_DIR/scripts/codium-extensions.ts" \
+  "$@"
