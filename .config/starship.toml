@@ -22,9 +22,6 @@ $status\
 $shell\
 $character"""
 
-[deno]
-detect_extensions = ["ts"]
-
 [time]
 disabled = false
 format = '🕙[\[ $time \]]($style) '
