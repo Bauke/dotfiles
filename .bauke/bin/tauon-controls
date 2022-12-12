@@ -2,5 +2,6 @@
 
 deno run \
   --allow-net="127.0.0.1:7813,127.0.0.1:7814" \
+  --allow-run="notify-send" \
   "$BAUKE_DIR/scripts/tauon-controls.ts" \
   "$@"
