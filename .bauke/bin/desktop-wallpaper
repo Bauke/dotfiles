@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-run="curl,xfconf-query" \
+  --allow-write \
+  "$BAUKE_DIR/scripts/desktop-wallpaper.ts" \
+  "$@"
