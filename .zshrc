@@ -16,4 +16,5 @@ source "$HOME/.functions.zsh"
 source "$HOME/.zle.zsh"
 
 eval "$(register-python-argcomplete pipx)"
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
