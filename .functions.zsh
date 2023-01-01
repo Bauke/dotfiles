@@ -10,3 +10,10 @@ get-feed-url () {
     echo
   done
 }
+
+to-opus () {
+  for input_file in "$@"; do
+    output_file="${input_file%.*}.opus"
+    ffmpeg -i "$input_file" -c:a libopus -b:a 128K "$output_file"
+  done
+}
