@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-read \
+  --allow-run="youtube3" \
+  "$BAUKE_DIR/scripts/edit-youtube-video.ts" \
+  "$@"
