@@ -1,13 +1,16 @@
+astro-build.astro-vscode
 brunnerh.insert-unicode
 denoland.vscode-deno
 Holllo.love
 jock.svg
 ritwickdey.LiveServer
+runem.lit-plugin
 rust-lang.rust-analyzer
 samverschueren.linter-xo
 serayuzgur.crates
 shd101wyy.markdown-preview-enhanced
 stylelint.vscode-stylelint
 tamasfe.even-better-toml
+unifiedjs.vscode-mdx
 usernamehw.errorlens
 vscode-icons-team.vscode-icons
