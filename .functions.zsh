@@ -1,3 +1,7 @@
+extract-clip () {
+  ffmpeg -i "$1" -ss "$2" -to "$3" -c copy "$4"
+}
+
 gtag () {
   git tag -s -a "$1" -m "Version $1"
 }
