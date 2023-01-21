@@ -1,7 +1,7 @@
 # Copies a section from a video using ffmpeg.
 # extract-clip <input file> <start timestamp> <end timestamp> <output file>
 extract-clip () {
-  ffmpeg -i "$1" -ss "$2" -to "$3" -c copy "$4"
+  ffmpeg -ss "$2" -i "$1" -to "$3" -c copy "$4"
 }
 
 # Creates a new signed, annotated git tag.
