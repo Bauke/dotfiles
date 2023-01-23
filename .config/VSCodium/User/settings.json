@@ -92,6 +92,8 @@
   "liveServer.settings.wait": 1000,
   // Markdown Preview Enhanced (ID: shd101wyy.markdown-preview-enhanced).
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  // Nix (ID: jnoortheen.nix-ide)
+  "nix.enableLanguageServer": true,
   // Stylelint (ID: stylelint.vscode-stylelint)
   "stylelint.validate": [
     "css",

@@ -1,8 +1,12 @@
+arrterian.nix-env-selector
 astro-build.astro-vscode
 brunnerh.insert-unicode
 denoland.vscode-deno
 Holllo.love
+jnoortheen.nix-ide
 jock.svg
+mkhl.direnv
+pinage404.nix-extension-pack
 ritwickdey.LiveServer
 runem.lit-plugin
 rust-lang.rust-analyzer
