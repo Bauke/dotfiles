@@ -11,11 +11,19 @@ async function main(): Promise<void> {
       default: 1080,
       depends: ["unsplash"],
     })
+    .option(
+      "--save-current <file:file>",
+      "Save the current wallpaper to a different file",
+    )
     .option("--width <width:number>", "The width of the image", {
       default: 1920,
       depends: ["unsplash"],
     })
     .parse(Deno.args);
+
+  if (options.saveCurrent) {
+    await Deno.copyFile(imagePath, options.saveCurrent);
+  }
 
   if (options.unsplash) {
     await downloadImage(
