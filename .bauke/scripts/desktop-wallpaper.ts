@@ -15,6 +15,7 @@ async function main(): Promise<void> {
       "--save-current <file:file>",
       "Save the current wallpaper to a different file",
     )
+    .option("--set <file:file>", "Set a file as the wallpaper")
     .option("--width <width:number>", "The width of the image", {
       default: 1920,
       depends: ["unsplash"],
@@ -23,6 +24,10 @@ async function main(): Promise<void> {
 
   if (options.saveCurrent) {
     await Deno.copyFile(imagePath, options.saveCurrent);
+  }
+
+  if (options.set) {
+    await setWallpaper(options.set);
   }
 
   if (options.unsplash) {
@@ -41,7 +46,7 @@ async function downloadImage(url: string): Promise<void> {
   }).status();
 }
 
-async function setWallpaper(): Promise<void> {
+async function setWallpaper(file: string = imagePath): Promise<void> {
   const monitors = ["monitorHDMI-0", "monitorHDMI-1"];
   for (const monitor of monitors) {
     await Deno.run({
@@ -52,7 +57,7 @@ async function setWallpaper(): Promise<void> {
         "-p",
         `/backdrop/screen0/${monitor}/workspace0/last-image`,
         "-s",
-        imagePath,
+        file,
       ],
     }).status();
   }
