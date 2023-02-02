@@ -7,8 +7,8 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./programs-services.nix
-    ./users.nix
     ./system.nix
+    ./users.nix
   ];
 
   nix = {

@@ -8,12 +8,12 @@
       bat
       catppuccin-cursors
       chromium
-      exa
       delta
       deno
       direnv
-      firefox
+      exa
       ffmpeg
+      firefox
       gegl
       gimp
       git
@@ -45,10 +45,10 @@
       vscodium.fhs
       xarchiver
       xclip
-      xorg.libXcursor
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
+      xorg.libXcursor
       (wrapOBS {
         plugins = with obs-studio-plugins; [
           input-overlay
