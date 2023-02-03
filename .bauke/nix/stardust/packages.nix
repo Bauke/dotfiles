@@ -25,6 +25,7 @@
       mpv
       nodejs
       nodePackages.pnpm
+      numlockx
       nvitop
       osu-lazer
       pavucontrol

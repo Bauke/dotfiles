@@ -35,11 +35,19 @@
 
     xserver = {
       desktopManager.xfce.enable = true;
-      displayManager.lightdm.enable = true;
       enable = true;
       layout = "be";
       videoDrivers = [ "nvidia" ];
       xkbVariant = "";
+
+      displayManager = {
+        lightdm = {
+          enable = true;
+          extraSeatDefaults = ''
+            greeter-setup-script=${pkgs.numlockx}/bin/numlockx on
+          '';
+        };
+      };
     };
   };
 }
