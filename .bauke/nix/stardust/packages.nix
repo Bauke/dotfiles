@@ -8,6 +8,7 @@
       bat
       catppuccin-cursors
       chromium
+      clonehero
       delta
       deno
       direnv
@@ -18,6 +19,7 @@
       gimp
       git
       imagemagick
+      jq
       kitty
       libnotify
       librewolf
