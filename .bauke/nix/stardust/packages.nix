@@ -20,6 +20,7 @@
       git
       imagemagick
       jq
+      keepassxc
       kitty
       libnotify
       librewolf
