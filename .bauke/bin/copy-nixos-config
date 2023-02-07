@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+deno run \
+  --allow-read \
+  --allow-run="hostname,sudo" \
+  "$BAUKE_DIR/scripts/copy-nixos-config.ts" \
+  "$@"
