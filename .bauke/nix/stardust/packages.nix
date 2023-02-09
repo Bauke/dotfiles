@@ -34,6 +34,7 @@
       pavucontrol
       picard
       pop-icon-theme
+      protonup-ng
       python310Packages.pipx
       qalculate-gtk
       restic
