@@ -27,6 +27,7 @@
     inter
     iosevka
     noto-fonts
+    victor-mono
     (nerdfonts.override { fonts = [ "Hasklig" ]; })
   ];
 
