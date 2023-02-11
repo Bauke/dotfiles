@@ -22,14 +22,25 @@
     shells = [ pkgs.zsh ];
   };
 
-  fonts.fonts = with pkgs; [
-    hasklig
-    inter
-    iosevka
-    noto-fonts
-    victor-mono
-    (nerdfonts.override { fonts = [ "Hasklig" ]; })
-  ];
+  fonts = {
+    fontconfig = {
+      defaultFonts = {
+        emoji = [ "Noto Color Emoji" ];
+        monospace = [ "Hasklig" "Victor Mono" "DejaVu Sans Mono" ];
+        sansSerif = [ "Inter" "DejaVu Sans" ];
+        serif = [ "Inter" "DejaVu Sans" ];
+      };
+    };
+
+    fonts = with pkgs; [
+      hasklig
+      inter
+      iosevka
+      noto-fonts
+      victor-mono
+      (nerdfonts.override { fonts = [ "Hasklig" ]; })
+    ];
+  };
 
   hardware = {
     opengl = {
