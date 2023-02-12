@@ -10,12 +10,24 @@ async function main(): Promise<void> {
     .option("--hostname", "The machine's configuration to copy.", {
       default: (await runAndReturnStdout({ cmd: ["hostname"] })).trim(),
     })
+    .option("--diff", 'Output diffs between local and "/etc/nixos/" files.')
     .parse(Deno.args);
 
   const sourceDir = new URL(`../nix/${options.hostname}/`, import.meta.url);
   const files = Array.from(Deno.readDirSync(sourceDir))
     .filter((entry) => entry.name.endsWith(".nix"))
     .map((entry) => sourceDir.pathname + entry.name);
+
+  if (options.diff) {
+    for (const file of files) {
+      const filename = file.slice(file.lastIndexOf("/") + 1);
+      await Deno.run({
+        cmd: ["delta", `/etc/nixos/${filename}`, file],
+      }).status();
+    }
+
+    return;
+  }
 
   await Deno.run({
     cmd: [

@@ -2,6 +2,6 @@
 
 deno run \
   --allow-read \
-  --allow-run="hostname,sudo" \
+  --allow-run="delta,hostname,sudo" \
   "$BAUKE_DIR/scripts/copy-nixos-config.ts" \
   "$@"
