@@ -10,7 +10,9 @@ async function main(): Promise<void> {
     .option("--hostname", "The machine's configuration to copy.", {
       default: (await runAndReturnStdout({ cmd: ["hostname"] })).trim(),
     })
-    .option("--diff", 'Output diffs between local and "/etc/nixos/" files.')
+    .option("--diff", 'Output diffs between local and "/etc/nixos/" files.', {
+      standalone: true,
+    })
     .option(
       "--rebuild <rebuild:string>",
       'Run "sudo nixos-rebuild <rebuild>" after copying.',
