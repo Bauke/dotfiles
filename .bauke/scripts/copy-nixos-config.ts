@@ -11,6 +11,10 @@ async function main(): Promise<void> {
       default: (await runAndReturnStdout({ cmd: ["hostname"] })).trim(),
     })
     .option("--diff", 'Output diffs between local and "/etc/nixos/" files.')
+    .option(
+      "--rebuild <rebuild:string>",
+      'Run "sudo nixos-rebuild <rebuild>" after copying.',
+    )
     .parse(Deno.args);
 
   const sourceDir = new URL(`../nix/${options.hostname}/`, import.meta.url);
@@ -39,6 +43,12 @@ async function main(): Promise<void> {
       "/etc/nixos/",
     ],
   }).status();
+
+  if (options.rebuild) {
+    await Deno.run({
+      cmd: ["sudo", "nixos-rebuild", options.rebuild],
+    }).status();
+  }
 }
 
 if (import.meta.main) {
