@@ -5,6 +5,7 @@
 {
   environment = {
     systemPackages = with pkgs; [
+      airshipper
       bat
       catppuccin-cursors
       chromium
@@ -15,6 +16,7 @@
       exa
       ffmpeg
       firefox
+      flameshot
       gegl
       gimp
       git
