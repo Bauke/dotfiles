@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+data_file="$BAUKE_DIR/data/drg-data.json"
+
+deno run \
+  --allow-read="$data_file" \
+  --allow-write="$data_file" \
+  "$BAUKE_DIR/scripts/drg-data-entry.ts" \
+  "$@"

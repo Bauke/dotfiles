@@ -5,6 +5,7 @@
 - [`codium-extensions`]: save and install VS Codium extensions using their identifier.
 - [`copy-nixos-config`]: copies NixOS configuration from `$BAUKE_DIR/nix/<hostname>/` to `/etc/nixos/`.
 - [`desktop-wallpaper`]: desktop wallpaper changer.
+- [`drg-data-entry`]: Deep Rock Galactic data tracker.
 - [`edit-youtube-video`]: edit a YouTube video via the Data API.
 - [`project-avatar`]: image generator for projects.
 - [`simple-git-push`]: `git push` with extra semantics.
@@ -13,6 +14,7 @@
 [`codium-extensions`]: ./scripts/codium-extensions.ts
 [`copy-nixos-config`]: ./scripts/copy-nixos-config.ts
 [`desktop-wallpaper`]: ./scripts/desktop-wallpaper.ts
+[`drg-data-entry`]: ./scripts/drg-data-entry.ts
 [`edit-youtube-video`]: ./scripts/edit-youtube-video.ts
 [`project-avatar`]: ./scripts/project-avatar.ts
 [`simple-git-push`]: ./scripts/simple-git-push.ts
