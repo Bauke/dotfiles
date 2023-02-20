@@ -16,7 +16,7 @@ const MissionTypes = [
   "Salvage Operation",
 ] as const;
 
-const Minerals = [
+const Collectables = [
   "Barley Bulb",
   "Bismor",
   "Croppa",
@@ -48,7 +48,7 @@ type Mission = {
 
   "Credits": number;
   "Experience": number;
-  "Items Collected": Record<typeof Minerals[number], number>;
+  "Items Collected": Record<typeof Collectables[number], number>;
 
   "Credit Breakdown": {
     "Primary Objective": number;
