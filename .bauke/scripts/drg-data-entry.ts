@@ -152,6 +152,7 @@ async function main(): Promise<void> {
             name: `Hazard ${value}`,
             value: value.toString(),
           })),
+          default: "5",
         },
         {
           type: prompt.Select,
@@ -170,6 +171,88 @@ async function main(): Promise<void> {
             name: value,
             value,
           })),
+        },
+        {
+          type: prompt.Number,
+          name: "Credits",
+          message: "Credits",
+        },
+        {
+          type: prompt.Number,
+          name: "Experience",
+          message: "Experience",
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Barley Bulb",
+          message: "Barley Bulb",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Bismor",
+          message: "Bismor",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Croppa",
+          message: "Croppa",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Enor Pearl",
+          message: "Enor Pearl",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Jadiz",
+          message: "Jadiz",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Magnite",
+          message: "Magnite",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Malt Star",
+          message: "Malt Star",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Phazyonite",
+          message: "Phazyonite",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Plagueheart",
+          message: "Plagueheart",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Starch Nut",
+          message: "Starch Nut",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Umanite",
+          message: "Umanite",
+          default: 0,
+        },
+        {
+          type: prompt.Number,
+          name: "Collectable:Yeast Cone",
+          message: "Yeast Cone",
+          default: 0,
         },
       ],
     );
@@ -195,6 +278,23 @@ async function main(): Promise<void> {
       "Mission Status":
         promptResults["Mission Status"] as Mission["Mission Status"],
       "Mission Type": promptResults["Mission Type"] as Mission["Mission Type"],
+
+      "Credits": promptResults["Credits"]!,
+      "Experience": promptResults["Experience"]!,
+      "Items Collected": {
+        "Barley Bulb": promptResults["Collectable:Barley Bulb"]!,
+        "Bismor": promptResults["Collectable:Bismor"]!,
+        "Croppa": promptResults["Collectable:Croppa"]!,
+        "Enor Pearl": promptResults["Collectable:Enor Pearl"]!,
+        "Jadiz": promptResults["Collectable:Jadiz"]!,
+        "Magnite": promptResults["Collectable:Magnite"]!,
+        "Malt Star": promptResults["Collectable:Malt Star"]!,
+        "Phazyonite": promptResults["Collectable:Phazyonite"]!,
+        "Plagueheart": promptResults["Collectable:Plagueheart"]!,
+        "Starch Nut": promptResults["Collectable:Starch Nut"]!,
+        "Umanite": promptResults["Collectable:Umanite"]!,
+        "Yeast Cone": promptResults["Collectable:Yeast Cone"]!,
+      },
     };
 
     if (options.testing) {
