@@ -182,80 +182,207 @@ async function main(): Promise<void> {
           name: "Experience",
           message: "Experience",
         },
-        {
-          type: prompt.Number,
-          name: "Collectable:Barley Bulb",
-          message: "Barley Bulb",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Bismor",
-          message: "Bismor",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Croppa",
-          message: "Croppa",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Enor Pearl",
-          message: "Enor Pearl",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Jadiz",
-          message: "Jadiz",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Magnite",
-          message: "Magnite",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Malt Star",
-          message: "Malt Star",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Phazyonite",
-          message: "Phazyonite",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Plagueheart",
-          message: "Plagueheart",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Starch Nut",
-          message: "Starch Nut",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Umanite",
-          message: "Umanite",
-          default: 0,
-        },
-        {
-          type: prompt.Number,
-          name: "Collectable:Yeast Cone",
-          message: "Yeast Cone",
-          default: 0,
-        },
       ],
     );
+
+    const collectableResults = await prompt.prompt([
+      {
+        type: prompt.Number,
+        name: "Collectable:Barley Bulb",
+        message: "Barley Bulb",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Bismor",
+        message: "Bismor",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Croppa",
+        message: "Croppa",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Enor Pearl",
+        message: "Enor Pearl",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Jadiz",
+        message: "Jadiz",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Magnite",
+        message: "Magnite",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Malt Star",
+        message: "Malt Star",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Phazyonite",
+        message: "Phazyonite",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Plagueheart",
+        message: "Plagueheart",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Starch Nut",
+        message: "Starch Nut",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Umanite",
+        message: "Umanite",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Collectable:Yeast Cone",
+        message: "Yeast Cone",
+        default: 0,
+      },
+    ]);
+
+    const creditResults = await prompt.prompt([
+      {
+        type: prompt.Number,
+        name: "Credits:Primary Objective",
+        message: "Credits: Primary Objective",
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Secondary Objective",
+        message: "Credits: Secondary Objective",
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Survival Bonus",
+        message: "Credits: Survival Bonus",
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Gold Mined",
+        message: "Credits: Gold Mined",
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Bittergem",
+        message: "Credits: Bittergem",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Ebonite Mutation",
+        message: "Credits: Ebonite Mutation",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Kursite Infection",
+        message: "Credits: Kursite Infection",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:OMEN Modular Exterminator",
+        message: "Credits: OMEN Modular Exterminator",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Tritilyte Shard",
+        message: "Credits: Tritilyte Shard",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Tyrant Shard",
+        message: "Credits: Tyrant Shard",
+        default: 0,
+      },
+    ]);
+
+    const experienceResults = await prompt.prompt([
+      {
+        type: prompt.Number,
+        name: "Experience:Primary Objective",
+        message: "Experience: Primary Objective",
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Secondary Objective",
+        message: "Experience: Secondary Objective",
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Minerals Mined",
+        message: "Experience: Minerals Mined",
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Hostiles Killed",
+        message: "Experience: Hostiles Killed",
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Double XP",
+        message: "Experience: Double XP",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Ebonite Mutation",
+        message: "Experience: Ebonite Mutation",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Kursite Infection",
+        message: "Experience: Kursite Infection",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:OMEN Modular Exterminator",
+        message: "Experience: OMEN Modular Exterminator",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Plagueheart",
+        message: "Experience: Plagueheart",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Tritilyte Shard",
+        message: "Experience: Tritilyte Shard",
+        default: 0,
+      },
+      {
+        type: prompt.Number,
+        name: "Experience:Tyrant Shard",
+        message: "Experience: Tyrant Shard",
+        default: 0,
+      },
+    ]);
 
     const newMission: Mission = {
       "Date": promptResults["Date"]!,
@@ -282,18 +409,50 @@ async function main(): Promise<void> {
       "Credits": promptResults["Credits"]!,
       "Experience": promptResults["Experience"]!,
       "Items Collected": {
-        "Barley Bulb": promptResults["Collectable:Barley Bulb"]!,
-        "Bismor": promptResults["Collectable:Bismor"]!,
-        "Croppa": promptResults["Collectable:Croppa"]!,
-        "Enor Pearl": promptResults["Collectable:Enor Pearl"]!,
-        "Jadiz": promptResults["Collectable:Jadiz"]!,
-        "Magnite": promptResults["Collectable:Magnite"]!,
-        "Malt Star": promptResults["Collectable:Malt Star"]!,
-        "Phazyonite": promptResults["Collectable:Phazyonite"]!,
-        "Plagueheart": promptResults["Collectable:Plagueheart"]!,
-        "Starch Nut": promptResults["Collectable:Starch Nut"]!,
-        "Umanite": promptResults["Collectable:Umanite"]!,
-        "Yeast Cone": promptResults["Collectable:Yeast Cone"]!,
+        "Barley Bulb": collectableResults["Collectable:Barley Bulb"]!,
+        "Bismor": collectableResults["Collectable:Bismor"]!,
+        "Croppa": collectableResults["Collectable:Croppa"]!,
+        "Enor Pearl": collectableResults["Collectable:Enor Pearl"]!,
+        "Jadiz": collectableResults["Collectable:Jadiz"]!,
+        "Magnite": collectableResults["Collectable:Magnite"]!,
+        "Malt Star": collectableResults["Collectable:Malt Star"]!,
+        "Phazyonite": collectableResults["Collectable:Phazyonite"]!,
+        "Plagueheart": collectableResults["Collectable:Plagueheart"]!,
+        "Starch Nut": collectableResults["Collectable:Starch Nut"]!,
+        "Umanite": collectableResults["Collectable:Umanite"]!,
+        "Yeast Cone": collectableResults["Collectable:Yeast Cone"]!,
+      },
+
+      "Credit Breakdown": {
+        "Primary Objective": creditResults["Credits:Primary Objective"]!,
+        "Secondary Objective": creditResults["Credits:Secondary Objective"]!,
+        "Survival Bonus": creditResults["Credits:Survival Bonus"]!,
+        "Gold Mined": creditResults["Credits:Gold Mined"]!,
+
+        "Bittergem": creditResults["Credits:Bittergem"]!,
+        "Ebonite Mutation": creditResults["Credits:Ebonite Mutation"]!,
+        "Kursite Infection": creditResults["Credits:Kursite Infection"]!,
+        "OMEN Modular Exterminator":
+          creditResults["Credits:OMEN Modular Exterminator"]!,
+        "Tritilyte Shard": creditResults["Credits:Tritilyte Shard"]!,
+        "Tyrant Shard": creditResults["Credits:Tyrant Shard"]!,
+      },
+
+      "Experience Breakdown": {
+        "Primary Objective": experienceResults["Experience:Primary Objective"]!,
+        "Secondary Objective":
+          experienceResults["Experience:Secondary Objective"]!,
+        "Minerals Mined": experienceResults["Experience:Minerals Mined"]!,
+        "Hostiles Killed": experienceResults["Experience:Hostiles Killed"]!,
+
+        "Double XP": experienceResults["Experience:Double XP"]!,
+        "Ebonite Mutation": experienceResults["Experience:Ebonite Mutation"]!,
+        "Kursite Infection": experienceResults["Experience:Kursite Infection"]!,
+        "OMEN Modular Exterminator":
+          experienceResults["Experience:OMEN Modular Exterminator"]!,
+        "Plagueheart": experienceResults["Experience:Plagueheart"]!,
+        "Tritilyte Shard": experienceResults["Experience:Tritilyte Shard"]!,
+        "Tyrant Shard": experienceResults["Experience:Tyrant Shard"]!,
       },
     };
 
