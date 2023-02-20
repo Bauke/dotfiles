@@ -56,12 +56,12 @@ type Mission = {
     "Survival Bonus": number;
     "Gold Mined": number;
 
-    "Bittergem"?: number;
-    "Ebonite Mutation"?: number;
-    "Kursite Infection"?: number;
-    "OMEN Modular Exterminator"?: number;
-    "Tritilyte Shard"?: number;
-    "Tyrant Shard"?: number;
+    "Bittergem": number;
+    "Ebonite Mutation": number;
+    "Kursite Infection": number;
+    "OMEN Modular Exterminator": number;
+    "Tritilyte Shard": number;
+    "Tyrant Shard": number;
   };
 
   "Experience Breakdown": {
@@ -70,13 +70,13 @@ type Mission = {
     "Minerals Mined": number;
     "Hostiles Killed": number;
 
-    "Double XP"?: number;
-    "Ebonite Mutation"?: number;
-    "Kursite Infection"?: number;
-    "OMEN Modular Exterminator"?: number;
-    "Plagueheart"?: number;
-    "Tritilyte Shard"?: number;
-    "Tyrant Shard"?: number;
+    "Double XP": number;
+    "Ebonite Mutation": number;
+    "Kursite Infection": number;
+    "OMEN Modular Exterminator": number;
+    "Plagueheart": number;
+    "Tritilyte Shard": number;
+    "Tyrant Shard": number;
   };
 };
 
