@@ -1,5 +1,6 @@
 {
   "deno.enable": true,
+  "git.untrackedChanges": "hidden",
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   }
