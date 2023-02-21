@@ -105,6 +105,7 @@ async function main(): Promise<void> {
   dataMissions.sort((a, b) => b.Index - a.Index);
 
   if (options.add) {
+    console.log("## General Info");
     const promptResults = await prompt.prompt(
       [
         {
@@ -193,6 +194,7 @@ async function main(): Promise<void> {
       ],
     );
 
+    console.log("## Collectables");
     const collectableResults = await prompt.prompt([
       {
         type: prompt.Number,
@@ -268,6 +270,7 @@ async function main(): Promise<void> {
       },
     ]);
 
+    console.log("## Credits Breakdown");
     const creditResults = await prompt.prompt([
       {
         type: prompt.Number,
@@ -332,6 +335,7 @@ async function main(): Promise<void> {
       },
     ]);
 
+    console.log("## Experience Breakdown");
     const experienceResults = await prompt.prompt([
       {
         type: prompt.Number,
@@ -397,6 +401,7 @@ async function main(): Promise<void> {
       },
     ]);
 
+    console.log("## Performance");
     const performanceResults = await prompt.prompt([
       {
         type: prompt.Number,
