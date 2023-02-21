@@ -79,6 +79,13 @@ type Mission = {
     "Tritilyte Shard": number;
     "Tyrant Shard": number;
   };
+
+  "Performance": {
+    "Kill Count": number;
+    "Mineral Count": number;
+    "Revives": number;
+    "Downs": number;
+  };
 };
 
 async function main(): Promise<void> {
@@ -390,6 +397,29 @@ async function main(): Promise<void> {
       },
     ]);
 
+    const performanceResults = await prompt.prompt([
+      {
+        type: prompt.Number,
+        name: "Performance:Kill Count",
+        message: "Performance: Kill Count",
+      },
+      {
+        type: prompt.Number,
+        name: "Performance:Mineral Count",
+        message: "Performance: Mineral Count",
+      },
+      {
+        type: prompt.Number,
+        name: "Performance:Revives",
+        message: "Performance: Revives",
+      },
+      {
+        type: prompt.Number,
+        name: "Performance:Downs",
+        message: "Performance: Downs",
+      },
+    ]);
+
     const newMission: Mission = {
       "Date": promptResults["Date"]!,
       "Index": (dataMissions[0]?.Index ?? 0) + 1,
@@ -460,6 +490,13 @@ async function main(): Promise<void> {
         "Plagueheart": experienceResults["Experience:Plagueheart"]!,
         "Tritilyte Shard": experienceResults["Experience:Tritilyte Shard"]!,
         "Tyrant Shard": experienceResults["Experience:Tyrant Shard"]!,
+      },
+
+      "Performance": {
+        "Kill Count": performanceResults["Performance:Kill Count"]!,
+        "Mineral Count": performanceResults["Performance:Mineral Count"]!,
+        "Revives": performanceResults["Performance:Revives"]!,
+        "Downs": performanceResults["Performance:Downs"]!,
       },
     };
 
