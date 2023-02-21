@@ -54,7 +54,8 @@ type Mission = {
     "Primary Objective": number;
     "Secondary Objective": number;
     "Survival Bonus": number;
-    "Gold Mined": number;
+    "Gold Mined (Gold)": number;
+    "Gold Mined (Credits)": number;
 
     "Bittergem": number;
     "Ebonite Mutation": number;
@@ -278,8 +279,13 @@ async function main(): Promise<void> {
       },
       {
         type: prompt.Number,
-        name: "Credits:Gold Mined",
-        message: "Credits: Gold Mined",
+        name: "Credits:Gold Mined (Gold)",
+        message: "Credits: Gold Mined (Gold)",
+      },
+      {
+        type: prompt.Number,
+        name: "Credits:Gold Mined (Credits)",
+        message: "Credits: Gold Mined (Credits)",
       },
       {
         type: prompt.Number,
@@ -427,7 +433,8 @@ async function main(): Promise<void> {
         "Primary Objective": creditResults["Credits:Primary Objective"]!,
         "Secondary Objective": creditResults["Credits:Secondary Objective"]!,
         "Survival Bonus": creditResults["Credits:Survival Bonus"]!,
-        "Gold Mined": creditResults["Credits:Gold Mined"]!,
+        "Gold Mined (Gold)": creditResults["Credits:Gold Mined (Gold)"]!,
+        "Gold Mined (Credits)": creditResults["Credits:Gold Mined (Credits)"]!,
 
         "Bittergem": creditResults["Credits:Bittergem"]!,
         "Ebonite Mutation": creditResults["Credits:Ebonite Mutation"]!,
