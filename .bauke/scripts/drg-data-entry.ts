@@ -1,6 +1,8 @@
 import { Command } from "https://deno.land/x/cliffy@v0.25.5/command/mod.ts";
 import * as prompt from "https://deno.land/x/cliffy@v0.25.5/prompt/mod.ts";
 
+import { stringifyJsonPretty } from "./utilities.ts";
+
 const CaveComplexity = [1, 2, 3] as const;
 const CaveLength = [1, 2, 3] as const;
 const HazardLevel = [1, 2, 3, 4, 5] as const;
@@ -506,14 +508,14 @@ async function main(): Promise<void> {
     };
 
     if (options.testing) {
-      console.log(newMission);
+      console.log(stringifyJsonPretty(newMission));
       return;
     }
 
     dataMissions.push(newMission);
     await Deno.writeTextFile(
       options.dataFile,
-      JSON.stringify(dataMissions, null, 2) + "\n",
+      stringifyJsonPretty(dataMissions) + "\n",
     );
   }
 }

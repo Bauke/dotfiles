@@ -1,6 +1,10 @@
 import { parse } from "https://deno.land/std@0.167.0/encoding/toml.ts";
 import { TextDecoder } from "https://deno.land/std@0.167.0/node/util.ts";
 
+export function stringifyJsonPretty(input: unknown): string {
+  return JSON.stringify(input, null, 2);
+}
+
 export async function runAndReturnStdout(
   options: Deno.RunOptions,
 ): Promise<string> {
