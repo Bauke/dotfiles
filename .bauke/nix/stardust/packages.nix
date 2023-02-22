@@ -52,6 +52,7 @@
       vscodium.fhs
       xarchiver
       xclip
+      xdotool
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
