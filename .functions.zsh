@@ -21,6 +21,13 @@ get-feed-url () {
   done
 }
 
+# Create a directory and cd into it.
+# mc <directory>
+mc () {
+  mkdir -p "$1"
+  cd "$1"
+}
+
 # Converts any given files to 128K Opus using ffmpeg.
 # to-opus <file ...>
 to-opus () {
