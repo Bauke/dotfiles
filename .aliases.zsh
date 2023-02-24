@@ -2,6 +2,7 @@
 alias c.="codium ."
 alias cat="bat"
 alias dust="dust -bs"
+alias handbrake="HandBrakeCLI"
 alias icat="kitty +kitten icat"
 alias ls="exa"
 alias mgs="mgitstatus"

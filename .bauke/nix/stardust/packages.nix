@@ -20,6 +20,7 @@
       gegl
       gimp
       git
+      handbrake
       imagemagick
       jq
       keepassxc
