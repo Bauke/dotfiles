@@ -1,5 +1,5 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.5/command/mod.ts";
-import * as prompt from "https://deno.land/x/cliffy@v0.25.5/prompt/mod.ts";
+import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
+import * as prompt from "https://deno.land/x/cliffy@v0.25.7/prompt/mod.ts";
 
 import { stringifyJsonPretty } from "./utilities.ts";
 

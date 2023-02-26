@@ -1,4 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.5/command/mod.ts";
+import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
 
 const hiddenApi = "http://127.0.0.1:7813";
 const remoteApi = "http://127.0.0.1:7814/api1";

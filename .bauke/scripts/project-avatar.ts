@@ -1,4 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.5/command/mod.ts";
+import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
 import { existsSync } from "https://deno.land/std@0.167.0/node/fs.ts";
 
 async function main(): Promise<void> {
