@@ -1,5 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
-
+import { Command } from "../dependencies.ts";
 import { runCommand } from "./run.ts";
 
 async function main(): Promise<void> {

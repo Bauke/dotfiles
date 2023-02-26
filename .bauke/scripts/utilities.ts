@@ -1,5 +1,4 @@
-import { parse } from "https://deno.land/std@0.167.0/encoding/toml.ts";
-import { TextDecoder } from "https://deno.land/std@0.167.0/node/util.ts";
+import { nodeUtil, toml } from "./dependencies.ts";
 
 export function stringifyJsonPretty(input: unknown): string {
   return JSON.stringify(input, null, 2);
@@ -9,7 +8,7 @@ export async function runAndReturnStdout(
   options: Deno.RunOptions,
 ): Promise<string> {
   const process = Deno.run({ stdout: "piped", ...options });
-  return new TextDecoder().decode(await process.output());
+  return new nodeUtil.TextDecoder().decode(await process.output());
 }
 
 export function tomlFrontmatter<T>(
@@ -34,5 +33,5 @@ export function tomlFrontmatter<T>(
 
   end += endMarker.length;
   const extra = data.slice(end);
-  return [parse(frontmatter) as T, extra.trimStart()];
+  return [toml.parse(frontmatter) as T, extra.trimStart()];
 }

@@ -1,5 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
-import * as prompt from "https://deno.land/x/cliffy@v0.25.7/prompt/mod.ts";
+import { Command, prompt } from "../dependencies.ts";
 
 export const runCommand = new Command()
   .name("run")

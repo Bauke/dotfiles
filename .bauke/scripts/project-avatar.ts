@@ -1,5 +1,4 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.7/command/mod.ts";
-import { existsSync } from "https://deno.land/std@0.167.0/node/fs.ts";
+import { Command, nodeFs } from "./dependencies.ts";
 
 async function main(): Promise<void> {
   const { args, options } = await new Command()
@@ -21,7 +20,7 @@ async function main(): Promise<void> {
 
   const [file, text] = args;
 
-  if (existsSync(file)) {
+  if (nodeFs.existsSync(file)) {
     if (options.overwrite) {
       await Deno.remove(file);
     } else {
@@ -45,7 +44,7 @@ async function main(): Promise<void> {
     ],
   }).status();
 
-  if (!existsSync(file)) {
+  if (!nodeFs.existsSync(file)) {
     console.log("Something went wrong with GEGL.");
     Deno.exit(1);
   }
