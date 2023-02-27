@@ -29,5 +29,8 @@ alias clipboard-to-file="xclip -sel clip -o > $1"
 alias file-to-clipboard="xclip -sel clip -i $1"
 alias gpg-decrypt-clipboard="xclip -sel clip -o | gpg --decrypt"
 
+# Video aliases.
+alias get-resolution="ffprobe -v error -select_streams v -show_entries stream=width,height -of csv=p=0:s=x"
+
 # See '$BAUKE_DIR/Restic Backups.md' for information.
 alias restic-b2="source $BAUKE_DIR/data/restic-b2-credentials.zsh && restic"
