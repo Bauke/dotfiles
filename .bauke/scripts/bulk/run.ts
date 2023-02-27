@@ -15,10 +15,15 @@ export const runCommand = new Command()
     "--include-directories",
     "Include directories found inside the directories.",
   )
-  .action(async ({ directory, includeDirectories }) => {
+  .option(
+    "--output-script",
+    "Output the commands as a shell script instead of running them.",
+  )
+  .action(async ({ directory, includeDirectories, outputScript }) => {
     await actionHandler({
       directories: directory,
       includeDirectories: includeDirectories ?? false,
+      outputScript: outputScript ?? false,
     });
   });
 
@@ -26,6 +31,7 @@ async function actionHandler(
   options: {
     directories: string[];
     includeDirectories: boolean;
+    outputScript: boolean;
   },
 ): Promise<void> {
   let command: string[] = [];
@@ -135,11 +141,28 @@ async function actionHandler(
       continue;
     }
 
-    console.log("\n## Output");
-    for (const constructedCommand of constructedCommands) {
-      await Deno.run({
-        cmd: constructedCommand,
-      }).status();
+    if (options.outputScript) {
+      const defaultFilename = "bulk-run-script.zsh";
+      const { filename } = await prompt.prompt([
+        {
+          type: prompt.Input,
+          name: "filename",
+          message: "Filename for the script",
+          default: defaultFilename,
+        },
+      ]);
+      const commands = constructedCommands.map((c) => c.join(" ")).join("\n");
+      await Deno.writeTextFile(
+        filename ?? defaultFilename,
+        `#!/usr/bin/env zsh\n\n${commands}`,
+      );
+    } else {
+      console.log("\n## Output");
+      for (const constructedCommand of constructedCommands) {
+        await Deno.run({
+          cmd: constructedCommand,
+        }).status();
+      }
     }
   }
 }
