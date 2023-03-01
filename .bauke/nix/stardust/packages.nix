@@ -27,6 +27,8 @@
       kitty
       libnotify
       librewolf
+      limitcpu
+      lm_sensors
       mat2
       mpv
       nodejs
