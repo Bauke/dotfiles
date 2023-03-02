@@ -38,3 +38,17 @@ restic-b2 restore <snapshot ID> --target <directory>
 ```zsh
 restic-b2 check
 ```
+
+## Backups
+
+* Monthly music library backup:
+
+```zsh
+restic-b2 backup --tag "$(date -d "$(date +'%Y-%m-01') -1 day" +'%B %Y')" ~/Beets
+```
+
+* KeePassXC database:
+
+```zsh
+restic-b2 backup ~/Bauke.kdbx
+```
