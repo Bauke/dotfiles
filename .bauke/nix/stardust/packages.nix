@@ -7,6 +7,7 @@
     systemPackages = with pkgs; [
       airshipper
       bat
+      bottom
       catppuccin-cursors
       chromium
       clonehero
