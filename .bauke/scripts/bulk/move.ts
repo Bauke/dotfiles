@@ -27,7 +27,18 @@ async function actionHandler(
         continue;
       }
 
-      console.log(file);
+      const filename = file.name;
+      const { destination } = await prompt.prompt([{
+        type: prompt.Input,
+        name: "destination",
+        message: `${filename} Destination:`,
+      }]);
+
+      if (destination === undefined || destination === "") {
+        continue;
+      }
+
+      console.log(filename, destination);
     }
   }
 }
