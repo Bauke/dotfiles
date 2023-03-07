@@ -41,6 +41,7 @@
       picard
       pop-icon-theme
       protonup-ng
+      protonvpn-gui
       python310Packages.pipx
       qalculate-gtk
       restic
