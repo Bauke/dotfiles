@@ -30,6 +30,7 @@
       librewolf
       limitcpu
       lm_sensors
+      lutris
       mat2
       mpv
       nodejs
