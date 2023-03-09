@@ -49,6 +49,8 @@
       ripgrep
       rnix-lsp
       rustup
+      sqlite
+      sqlitebrowser
       standardnotes
       starship
       steam
