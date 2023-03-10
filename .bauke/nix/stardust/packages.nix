@@ -65,6 +65,7 @@
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
       xorg.libXcursor
+      (callPackage ./samrewritten.nix { })
       (wrapOBS {
         plugins = with obs-studio-plugins; [
           input-overlay
