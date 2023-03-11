@@ -25,6 +25,11 @@ stdenv.mkDerivation rec {
 
   installFlags = [ "PREFIX=$(out)" ];
 
+  postInstall = ''
+    substituteInPlace "$out/share/applications/samrewritten.desktop" \
+      --replace "Exec=/usr" "Exec=$out"
+  '';
+
   meta = with lib; {
     description = "Steam Achievement Manager For Linux. Rewritten in C++.";
     homepage = "https://github.com/PaulCombal/SamRewritten";
