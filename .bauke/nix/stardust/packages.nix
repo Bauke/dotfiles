@@ -45,6 +45,7 @@
       protonvpn-gui
       python310Packages.pipx
       qalculate-gtk
+      ranger
       restic
       ripgrep
       rnix-lsp
