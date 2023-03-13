@@ -18,6 +18,7 @@
       ffmpeg
       firefox
       flameshot
+      font-manager
       gegl
       gimp
       git
