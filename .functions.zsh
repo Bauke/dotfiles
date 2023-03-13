@@ -28,6 +28,12 @@ mc () {
   cd "$1"
 }
 
+# Select a window and resize it to the specified resolution.
+# resize-window [width (default: 1280)] [height (default: 720)]
+resize-window () {
+  xdotool selectwindow windowsize ${1-1280} ${2-720}
+}
+
 # Converts any given files to 128K Opus using ffmpeg.
 # to-opus <file ...>
 to-opus () {
