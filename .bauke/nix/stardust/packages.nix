@@ -10,6 +10,7 @@
       bottom
       catppuccin-cursors
       chromium
+      clang
       clonehero
       delta
       deno
