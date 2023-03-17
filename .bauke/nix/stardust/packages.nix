@@ -24,6 +24,7 @@
       gimp
       git
       handbrake
+      hexyl
       imagemagick
       jq
       keepassxc
@@ -42,6 +43,7 @@
       osu-lazer
       pavucontrol
       picard
+      pkg-config
       pop-icon-theme
       protonup-ng
       protonvpn-gui
