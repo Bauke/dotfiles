@@ -154,7 +154,7 @@ async function actionHandler(
       const commands = constructedCommands.map((c) => c.join(" ")).join("\n");
       await Deno.writeTextFile(
         filename ?? defaultFilename,
-        `#!/usr/bin/env zsh\n\n${commands}`,
+        `#!/usr/bin/env zsh\n\nsource "$HOME/.aliases.zsh"\n\n${commands}`,
       );
     } else {
       console.log("\n## Output");
