@@ -40,6 +40,7 @@ async function actionHandler(
   const substituteMarkers = {
     absoluteFile: "$absoluteFile",
     filename: "$filename",
+    outWithFile: "$outWithFile",
   };
 
   for (const directory of options.directories) {
@@ -73,6 +74,7 @@ async function actionHandler(
       const substitutes = [
         [substituteMarkers.absoluteFile, absoluteFile],
         [substituteMarkers.filename, file.name],
+        [substituteMarkers.outWithFile, `$out/${file.name}`],
       ];
 
       argumentLoop:
@@ -143,7 +145,13 @@ async function actionHandler(
 
     if (options.outputScript) {
       const defaultFilename = "bulk-run-script.zsh";
-      const { filename } = await prompt.prompt([
+      const { filename, outputDirectory } = await prompt.prompt([
+        {
+          type: prompt.Input,
+          name: "outputDirectory",
+          message: "Output directory to set as $out",
+          default: ".",
+        },
         {
           type: prompt.Input,
           name: "filename",
@@ -154,7 +162,11 @@ async function actionHandler(
       const commands = constructedCommands.map((c) => c.join(" ")).join("\n");
       await Deno.writeTextFile(
         filename ?? defaultFilename,
-        `#!/usr/bin/env zsh\n\nsource "$HOME/.aliases.zsh"\n\n${commands}`,
+        `#!/usr/bin/env zsh
+
+source "$HOME/.aliases.zsh"
+out="${outputDirectory}"
+${commands}`,
       );
     } else {
       console.log("\n## Output");
