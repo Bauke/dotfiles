@@ -6,12 +6,14 @@ alias handbrake="HandBrakeCLI --preset-import-file $BAUKE_DIR/data/handbrake-pre
 alias handbrake720p30fps="handbrake -Z '720p 30FPS'"
 alias hex="hexyl"
 alias icat="kitty +kitten icat"
+alias list-installed-crates="cargo install --list | rg --color never -o '^[^ ]+'"
 alias ls="exa"
 alias mgs="mgitstatus"
 alias mpv-audio="mpv --no-video"
 alias tar-extract="tar -x -f"
 alias tar-list="tar -t -f"
 alias trash="gio trash"
+alias weather="wthrr"
 
 # Git aliases.
 alias dotfiles="GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME"
