@@ -58,11 +58,11 @@
   /* VS Code window settings. */
   "window.titleBarStyle": "custom",
   /* VS Code workbench settings. */
-  "workbench.colorTheme": "Love Dark",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.enableExperiments": false,
   "workbench.editSessions.autoResume": "off",
   "workbench.editSessions.continueOn": "off",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.startupEditor": "none",
   /* Extension settings. */
   // Colorize (ID: kamikillerto.vscode-colorize).
