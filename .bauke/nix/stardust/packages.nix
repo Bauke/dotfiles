@@ -30,6 +30,7 @@
       keepassxc
       kitty
       libnotify
+      libreoffice
       librewolf
       limitcpu
       lm_sensors
