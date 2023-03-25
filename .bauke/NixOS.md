@@ -2,7 +2,7 @@
 
 ## Management
 
-Using the `copy-nixos-config` script, all the configurations are stored in `$BAUKE_DIR/nix/` and copied to `/etc/nixos` for each respective [system](#Systems).
+Using the `copy-nixos-config` script, all the configurations are stored in `$BAUKE_DIR/nix/` and copied to `/etc/nixos` for each respective [system](#systems).
 
 * Get a diff between the current files in `/etc/nixos` and `$BAUKE_DIR/nix/<system>`.
 
