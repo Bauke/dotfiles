@@ -141,6 +141,9 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
   },
+  "[nix]": {
+    "editor.formatOnSave": true
+  },
   "[python]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 4
