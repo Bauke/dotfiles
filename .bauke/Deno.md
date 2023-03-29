@@ -22,6 +22,33 @@
 [`simple-git-push`]: ./scripts/simple-git-push.ts
 [`tauon-controls`]: ./scripts/tauon-controls.ts
 
+## Cliffy
+
+For CLI creation [Cliffy] is used, a Deno-specific framework for handling input and parsing arguments.
+
+* A simple command with a `--file <file>` argument:
+
+```ts
+// Assuming the script location is `$BAUKE_DIR/scripts`.
+import { Command } from "./dependencies.ts";
+
+const { options } = await new Command()
+  // CLI information, shown in --help.
+  .name("example-cli")
+  .description("Description of the program.")
+  // Add the --file option with a default value.
+  .option("-f, --file <file:file>", "Example file", {
+    default: "example.txt"
+  })
+  .parse(Deno.args);
+
+console.log(options.file);
+```
+
+* An example of subcommands can be seen in [`bulk`], each command is created like above but added to the main CLI via `.command("name", Command)`.
+
+[Cliffy]: https://cliffy.io
+
 ## Why `bin/` + `scripts/`
 
 Deno has [some issues](https://github.com/denoland/deno/issues/17195) with running files without a file extension (like what you'd want in `bin/`). So instead all the scripts are located in `scripts/` with proper file extensions and the `bin/` files call those scripts using `deno run`.
