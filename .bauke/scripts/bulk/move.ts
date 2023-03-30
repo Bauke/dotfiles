@@ -38,6 +38,7 @@ async function actionHandler(
         continue;
       }
 
+      // TODO: Move the file.
       console.log(filename, destination);
     }
   }
