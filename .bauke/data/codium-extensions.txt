@@ -4,7 +4,6 @@ brunnerh.insert-unicode
 Catppuccin.catppuccin-vsc
 Catppuccin.catppuccin-vsc-icons
 denoland.vscode-deno
-Holllo.love
 jnoortheen.nix-ide
 jock.svg
 mkhl.direnv
@@ -15,9 +14,7 @@ rust-lang.rust-analyzer
 samverschueren.linter-xo
 serayuzgur.crates
 shd101wyy.markdown-preview-enhanced
-Slint.slint
 stylelint.vscode-stylelint
 tamasfe.even-better-toml
 unifiedjs.vscode-mdx
 usernamehw.errorlens
-vscode-icons-team.vscode-icons
