@@ -1,0 +1,8 @@
+[[row]]
+ratio = 2
+[[row.child]]
+type = "cpu"
+
+[[row]]
+[[row.child]]
+type = "temperature"
