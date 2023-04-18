@@ -10,6 +10,7 @@ alias list-installed-crates="cargo install --list | rg --color never -o '^[^ ]+'
 alias ls="exa"
 alias mgs="mgitstatus"
 alias mpv-audio="mpv --no-video"
+alias o="xdg-open"
 alias tar-extract="tar -x -f"
 alias tar-list="tar -t -f"
 alias trash="gio trash"
