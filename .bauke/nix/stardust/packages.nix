@@ -6,6 +6,7 @@
   environment = {
     systemPackages = with pkgs; [
       airshipper
+      apngasm
       bat
       bottom
       catppuccin-cursors
