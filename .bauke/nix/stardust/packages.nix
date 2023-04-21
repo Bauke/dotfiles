@@ -68,6 +68,7 @@
       xarchiver
       xclip
       xdotool
+      xfce.xfce4-genmon-plugin
       xfce.xfce4-pulseaudio-plugin
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
