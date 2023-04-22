@@ -13,6 +13,7 @@
       chromium
       clang
       clonehero
+      conky
       delta
       deno
       direnv
