@@ -14,7 +14,7 @@ async function main(): Promise<void> {
     .option("--print <print:string>", "Print data from the current song.")
     .option(
       "--volume <volume:number>",
-      "Change the volume by a relative amount",
+      "Change the volume by a relative amount.",
     )
     .parse(Deno.args);
 
