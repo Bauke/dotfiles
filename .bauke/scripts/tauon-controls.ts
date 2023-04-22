@@ -11,6 +11,7 @@ async function main(): Promise<void> {
     .option("--next-song", "Play the next song.")
     .option("--play-pause", "Toggle play or pause.")
     .option("--previous-song", "Play the previous song.")
+    .option("--print <print:string>", "Print data from the current song.")
     .option(
       "--volume <volume:number>",
       "Change the volume by a relative amount",
@@ -36,19 +37,44 @@ async function main(): Promise<void> {
   if (options.volume !== undefined) {
     await fetch(`${remoteApi}/setvolumerel/${options.volume}`);
   }
+
+  if (options.print !== undefined) {
+    const status = await getStatus();
+    const progressPercentage = ((status.progress / status.track.duration) * 100)
+      .toFixed(2);
+    const markersAndReplacements = [
+      ["album", status.album],
+      ["artist", status.artist],
+      ["title", status.title],
+      ["progress", progressPercentage],
+    ];
+
+    let formattedString = options.print;
+    for (const [marker, replacement] of markersAndReplacements) {
+      const regex = new RegExp(`<${marker}>`, "g");
+      formattedString = formattedString.replace(regex, replacement);
+    }
+
+    console.log(formattedString);
+  }
 }
 
 type Status = {
-  artist?: string;
-  title?: string;
+  album: string;
+  artist: string;
+  progress: number;
+  title: string;
+  track: {
+    duration: number;
+  };
 };
 
-async function notifyCurrentSong(): Promise<void> {
-  const status: Status = await (await fetch(`${remoteApi}/status`)).json();
-  if (status.artist === undefined || status.title === undefined) {
-    return;
-  }
+async function getStatus(): Promise<Status> {
+  return await (await fetch(`${remoteApi}/status`)).json();
+}
 
+async function notifyCurrentSong(): Promise<void> {
+  const status = await getStatus();
   await Deno.run({
     cmd: ["notify-send", status.title, status.artist],
   }).status();
