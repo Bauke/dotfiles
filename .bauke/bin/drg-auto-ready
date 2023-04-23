@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# Automatically type "r" in the Deep Rock Galactic chat when it's running and
+# the currently active window.
+
+drg_pid=$(xdotool search --name 'Deep Rock Galactic' getwindowpid)
+active_window_pid=$(xdotool getactivewindow getwindowpid)
+
+if [[ $drg_pid = $active_window_pid ]]; then
+  xdotool key --delay 50 Enter r Enter
+fi
