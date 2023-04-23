@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+# Automatically type something in Deep Rock Galactic when it is the
+# currently active window, text defaults to "r".
+# drg-auto-type [text]
+
+drg_pid=$(xdotool search --name 'Deep Rock Galactic' getwindowpid)
+active_window_pid=$(xdotool getactivewindow getwindowpid)
+
+if [[ $drg_pid = $active_window_pid ]]; then
+  sleep 0.1
+  xdotool key Enter
+  xdotool type ${1-'r'}
+  xdotool key Enter
+fi
