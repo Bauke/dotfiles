@@ -1,4 +1,4 @@
-import { Command } from "./dependencies.ts";
+import { Command, nodeFs } from "./dependencies.ts";
 
 const hiddenApi = "http://127.0.0.1:7813";
 const remoteApi = "http://127.0.0.1:7814/api1";
@@ -16,6 +16,7 @@ async function main(): Promise<void> {
       "--volume <volume:number>",
       "Change the volume by a relative amount.",
     )
+    .option("--write-image", "Write the album cover image to a temporary file.")
     .parse(Deno.args);
 
   if (options.currentSong) {
@@ -57,11 +58,30 @@ async function main(): Promise<void> {
 
     console.log(formattedString);
   }
+
+  if (options.writeImage) {
+    const status = await getStatus();
+    const path = `/tmp/tauon-cover-${status.id}.jpg`;
+    if (nodeFs.existsSync(path)) {
+      console.log(path);
+      return;
+    }
+
+    const image = await fetch(`${remoteApi}/pic/medium/${status.id}`);
+    if (image.body === null) {
+      return;
+    }
+
+    const imageBuffer = new Uint8Array(await image.arrayBuffer());
+    await Deno.writeFile(path, imageBuffer);
+    console.log(path);
+  }
 }
 
 type Status = {
   album: string;
   artist: string;
+  id: number;
   progress: number;
   title: string;
   track: {
