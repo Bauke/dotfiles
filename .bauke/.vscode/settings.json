@@ -3,5 +3,14 @@
   "git.untrackedChanges": "hidden",
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "Lua.diagnostics.disable": [
+    // The custom functions for Conky must be global and start with lowercase
+    // "conky", so this warning has to be disabled.
+    "lowercase-global"
+  ],
+  "Lua.diagnostics.globals": [
+    "conky",
+    "conky_parse"
+  ]
 }
