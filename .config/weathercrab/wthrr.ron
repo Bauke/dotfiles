@@ -1,0 +1,21 @@
+(
+    address: "Hasselt,BE",
+    language: "en_US",
+    forecast: [],
+    units: (
+        temperature: celsius,
+        speed: kmh,
+        time: military,
+        precipitation: mm,
+    ),
+    gui: (
+        border: single,
+        color: plain,
+        graph: (
+            style: lines(slim),
+            rowspan: single,
+            time_indicator: true,
+        ),
+        greeting: false,
+    ),
+)
