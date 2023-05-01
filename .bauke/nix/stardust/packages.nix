@@ -39,6 +39,7 @@
       lutris
       mat2
       mpv
+      nitrogen
       nodejs
       nodePackages.pnpm
       numlockx
