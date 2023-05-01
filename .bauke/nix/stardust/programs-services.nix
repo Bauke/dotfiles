@@ -34,19 +34,36 @@
     };
 
     xserver = {
-      desktopManager.xfce.enable = true;
       enable = true;
       layout = "be";
       videoDrivers = [ "nvidia" ];
       xkbVariant = "";
 
+      desktopManager = {
+        xterm.enable = false;
+        xfce = {
+          enable = true;
+          enableXfwm = false;
+          noDesktop = true;
+        };
+      };
+
       displayManager = {
+        defaultSession = "xfce";
         lightdm = {
           enable = true;
           extraSeatDefaults = ''
             greeter-setup-script=${pkgs.numlockx}/bin/numlockx on
           '';
         };
+      };
+
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          dmenu
+          i3status
+        ];
       };
     };
   };
