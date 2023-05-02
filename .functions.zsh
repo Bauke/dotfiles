@@ -1,3 +1,12 @@
+# Returns the previous month as "Month Year" (ie. "April 2023").
+# date-last-month-year
+date-last-month-year () {
+  # The inner date "+'%Y-%m-01'" gets the date of the current month with 01 as the day.
+  # Then that date has 1 day subtracted (date -d ... -1 day).
+  # And finally "+'%B %Y'" gets the resulting date as the month and year.
+  date -d "$(date +'%Y-%m-01') -1 day" +'%B %Y'
+}
+
 # Copies a section from a video using ffmpeg.
 # extract-clip <input file> <start timestamp> <end timestamp> <output file>
 extract-clip () {
