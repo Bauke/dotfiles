@@ -15,6 +15,7 @@ alias tar-extract="tar -x -f"
 alias tar-list="tar -t -f"
 alias trash="gio trash"
 alias weather="wthrr"
+alias yt-dlp-audio="yt-dlp -x --ignore-config"
 
 # Git aliases.
 alias dotfiles="GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME"
