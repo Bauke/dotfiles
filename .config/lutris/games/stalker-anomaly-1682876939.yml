@@ -1,0 +1,7 @@
+game:
+  exe: '/home/bauke/Games/S.T.A.L.K.E.R.: Anomaly/AnomalyLauncher.exe'
+system:
+  use_us_layout: true
+wine:
+  esync: false
+  fsync: false
