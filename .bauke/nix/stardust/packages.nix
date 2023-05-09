@@ -55,6 +55,7 @@
       qalculate-gtk
       ranger
       restic
+      resvg
       ripgrep
       rnix-lsp
       rustup
