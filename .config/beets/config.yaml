@@ -3,3 +3,6 @@ library: /home/bauke/Beets/Beets.db
 import:
   move: yes
 languages: en
+paths:
+  # Prefix the 末 character so compilations are always sorted last.
+  comp: 末 Compilations/$album%aunique{}/$track $title
