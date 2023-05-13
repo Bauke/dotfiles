@@ -17,6 +17,7 @@
       delta
       deno
       direnv
+      dupeguru
       exa
       ffmpeg
       firefox
