@@ -50,6 +50,7 @@
       picard
       pkg-config
       pop-icon-theme
+      prismlauncher
       protonup-ng
       protonvpn-gui
       python310Packages.pipx
