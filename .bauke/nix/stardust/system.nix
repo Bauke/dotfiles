@@ -33,6 +33,7 @@
     };
 
     fonts = with pkgs; [
+      corefonts
       hasklig
       inter
       iosevka
