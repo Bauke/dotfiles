@@ -1,3 +1,13 @@
+# Alias for bottom with shorthand for configuration.
+# bottom [config (default: none)]
+bottom () {
+  if [[ -z $1 ]]; then
+    btm
+  else
+    btm -C "$HOME/.config/bottom/$1.toml"
+  fi
+}
+
 # Returns the previous month as "Month Year" (ie. "April 2023").
 # date-last-month-year
 date-last-month-year () {
