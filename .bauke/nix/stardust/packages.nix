@@ -16,6 +16,7 @@
       conky
       delta
       deno
+      dig
       direnv
       dupeguru
       exa
