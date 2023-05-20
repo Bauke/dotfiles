@@ -48,6 +48,7 @@
       nvitop
       osu-lazer
       pavucontrol
+      peek
       picard
       pkg-config
       pop-icon-theme
