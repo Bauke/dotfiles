@@ -40,6 +40,7 @@
       lm_sensors
       lutris
       mat2
+      mkvtoolnix
       mpv
       nitrogen
       nodejs
