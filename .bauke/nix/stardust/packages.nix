@@ -20,6 +20,7 @@
       direnv
       dupeguru
       exa
+      fd
       ffmpeg
       firefox
       flameshot
