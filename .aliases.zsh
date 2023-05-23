@@ -2,6 +2,7 @@
 alias c.="codium ."
 alias cat="bat"
 alias dust="dust -bs"
+alias find="fd"
 alias handbrake="HandBrakeCLI --preset-import-file $BAUKE_DIR/data/handbrake-presets.json"
 alias handbrake720p30fps="handbrake -Z '720p 30FPS'"
 alias hex="hexyl"
