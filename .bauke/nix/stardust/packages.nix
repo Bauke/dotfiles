@@ -19,6 +19,7 @@
       dig
       direnv
       dupeguru
+      eclipses.eclipse-java
       exa
       fd
       ffmpeg
@@ -73,6 +74,7 @@
       steam
       tauon
       tea
+      temurin-bin
       transmission-gtk
       vscodium.fhs
       xarchiver
