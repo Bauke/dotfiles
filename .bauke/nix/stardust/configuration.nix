@@ -1,6 +1,6 @@
 # The main configuration file.
 
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -16,7 +16,16 @@
   };
 
   nixpkgs = {
-    config.allowUnfree = true;
+    config = {
+      allowUnfree = true;
+      packageOverrides = pkgs: {
+        # Add the unstable channel as a separate package set.
+        unstable = import <nixos-unstable> {
+          # Pass config through so everything is shared between all channels.
+          config = config.nixpkgs.config;
+        };
+      };
+    };
   };
 
   # Before changing this value read the documentation for this option!
