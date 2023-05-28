@@ -9,6 +9,7 @@
       apngasm
       bat
       bottom
+      calibre
       catppuccin-cursors
       chromium
       clang
