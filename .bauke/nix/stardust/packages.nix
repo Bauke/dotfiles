@@ -76,6 +76,8 @@
       tea
       temurin-bin
       transmission-gtk
+      unstable.typst
+      unstable.typst-lsp
       vscodium.fhs
       xarchiver
       xclip
