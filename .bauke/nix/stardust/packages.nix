@@ -78,8 +78,8 @@
       temurin-bin
       transmission-gtk
       turbo
-      unstable.typst
-      unstable.typst-lsp
+      typst
+      typst-lsp
       vscodium.fhs
       xarchiver
       xclip
