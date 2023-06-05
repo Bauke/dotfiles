@@ -2,7 +2,6 @@
 
 ## Scripts
 
-- [`bulk`]: bulk doer of things.
 - [`codium-extensions`]: save and install VS Codium extensions using their identifier.
 - [`copy-nixos-config`]: copies NixOS configuration from `$BAUKE_DIR/nix/<hostname>/` to `/etc/nixos/`.
 - [`desktop-wallpaper`]: desktop wallpaper changer.
@@ -12,7 +11,6 @@
 - [`simple-git-push`]: `git push` with extra semantics.
 - [`tauon-controls`]: remote control CLI for Tauon Music Box.
 
-[`bulk`]: ./scripts/bulk/bulk.ts
 [`codium-extensions`]: ./scripts/codium-extensions.ts
 [`copy-nixos-config`]: ./scripts/copy-nixos-config.ts
 [`desktop-wallpaper`]: ./scripts/desktop-wallpaper.ts
@@ -44,8 +42,6 @@ const { options } = await new Command()
 
 console.log(options.file);
 ```
-
-* An example of subcommands can be seen in [`bulk`], each command is created like above but added to the main CLI via `.command("name", Command)`.
 
 [Cliffy]: https://cliffy.io
 

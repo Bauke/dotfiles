@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-
-deno run \
-  --allow-read \
-  --allow-run \
-  "$BAUKE_DIR/scripts/bulk/bulk.ts" \
-  "$@"
