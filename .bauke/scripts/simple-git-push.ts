@@ -26,7 +26,6 @@ async function main(): Promise<void> {
 async function gitPush(remote: string, args: string[]): Promise<void> {
   await new Deno.Command("git", {
     args: [
-      "git",
       "push",
       "--follow-tags",
       remote,
