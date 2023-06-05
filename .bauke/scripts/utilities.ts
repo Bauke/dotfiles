@@ -1,14 +1,25 @@
-import { nodeUtil, toml } from "./dependencies.ts";
+import { toml } from "./dependencies.ts";
+
+export async function pathExists(path: string): Promise<boolean> {
+  try {
+    await Deno.stat(path);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 export function stringifyJsonPretty(input: unknown): string {
   return JSON.stringify(input, null, 2);
 }
 
 export async function runAndReturnStdout(
-  options: Deno.RunOptions,
+  command: string,
+  options: Deno.CommandOptions = {},
 ): Promise<string> {
-  const process = Deno.run({ stdout: "piped", ...options });
-  return new nodeUtil.TextDecoder().decode(await process.output());
+  const process = new Deno.Command(command, { stdout: "piped", ...options });
+  const { stdout } = await process.output();
+  return new TextDecoder().decode(stdout);
 }
 
 export function tomlFrontmatter<T>(

@@ -1,4 +1,5 @@
-import { Command, nodeFs } from "./dependencies.ts";
+import { Command } from "./dependencies.ts";
+import { pathExists } from "./utilities.ts";
 
 async function main(): Promise<void> {
   const { args, options } = await new Command()
@@ -20,7 +21,7 @@ async function main(): Promise<void> {
 
   const [file, text] = args;
 
-  if (nodeFs.existsSync(file)) {
+  if (await pathExists(file)) {
     if (options.overwrite) {
       await Deno.remove(file);
     } else {
@@ -29,9 +30,8 @@ async function main(): Promise<void> {
     }
   }
 
-  await Deno.run({
-    cmd: [
-      "gegl",
+  await new Deno.Command("gegl", {
+    args: [
       "-o",
       file,
       "--",
@@ -42,16 +42,15 @@ async function main(): Promise<void> {
         width: options.width,
       }),
     ],
-  }).status();
+  }).output();
 
-  if (!nodeFs.existsSync(file)) {
+  if (!await pathExists(file)) {
     console.log("Something went wrong with GEGL.");
     Deno.exit(1);
   }
 
-  await Deno.run({
-    cmd: [
-      "convert",
+  await new Deno.Command("convert", {
+    args: [
       file,
       "-background",
       "transparent",
@@ -61,10 +60,10 @@ async function main(): Promise<void> {
       `${options.width}x${options.height}`,
       file,
     ],
-  }).status();
+  }).output();
 
   if (options.clean) {
-    await Deno.run({ cmd: ["mat2", "--inplace", file] }).status();
+    await new Deno.Command("mat2", { args: ["--inplace", file] }).output();
   }
 }
 

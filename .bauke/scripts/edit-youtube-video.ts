@@ -49,9 +49,8 @@ async function main(): Promise<void> {
     return;
   }
 
-  await Deno.run({
-    cmd: [
-      "youtube3",
+  await new Deno.Command("youtube3", {
+    args: [
       "videos",
       "update",
       "-r",
@@ -63,7 +62,7 @@ async function main(): Promise<void> {
       "-r",
       `snippet.title=${title}`,
     ],
-  }).status();
+  }).output();
 }
 
 function formatDescription(frontmatter: Frontmatter): string {

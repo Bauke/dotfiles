@@ -1,4 +1,5 @@
-import { Command, nodeFs } from "./dependencies.ts";
+import { Command } from "./dependencies.ts";
+import { pathExists } from "./utilities.ts";
 
 const hiddenApi = "http://127.0.0.1:7813";
 const remoteApi = "http://127.0.0.1:7814/api1";
@@ -62,7 +63,7 @@ async function main(): Promise<void> {
   if (options.writeImage) {
     const status = await getStatus();
     const path = `/tmp/tauon-cover-${status.id}.jpg`;
-    if (nodeFs.existsSync(path)) {
+    if (await pathExists(path)) {
       console.log(path);
       return;
     }
@@ -95,9 +96,9 @@ async function getStatus(): Promise<Status> {
 
 async function notifyCurrentSong(): Promise<void> {
   const status = await getStatus();
-  await Deno.run({
-    cmd: ["notify-send", status.title, status.artist],
-  }).status();
+  await new Deno.Command("notify-send", {
+    args: [status.title, status.artist],
+  }).output();
 }
 
 if (import.meta.main) {

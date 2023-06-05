@@ -41,17 +41,16 @@ async function main(): Promise<void> {
 }
 
 async function downloadImage(url: string): Promise<void> {
-  await Deno.run({
-    cmd: ["curl", "-fsLS", url, "-o", imagePath],
-  }).status();
+  await new Deno.Command("curl", {
+    args: ["-fsLS", url, "-o", imagePath],
+  }).output();
 }
 
 async function setWallpaper(file: string = imagePath): Promise<void> {
   const monitors = ["monitorHDMI-0", "monitorHDMI-1"];
   for (const monitor of monitors) {
-    await Deno.run({
-      cmd: [
-        "xfconf-query",
+    await new Deno.Command("xfconf-query", {
+      args: [
         "-c",
         "xfce4-desktop",
         "-p",
@@ -59,7 +58,7 @@ async function setWallpaper(file: string = imagePath): Promise<void> {
         "-s",
         file,
       ],
-    }).status();
+    }).output();
   }
 }
 

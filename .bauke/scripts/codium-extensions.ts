@@ -21,13 +21,11 @@ async function main(): Promise<void> {
 
   if (options.install) {
     const extensions = await getSavedExtensions(options.file);
-    const process = Deno.run({
-      cmd: [
-        "codium",
+    await new Deno.Command("codium", {
+      args: [
         ...extensions.flatMap((id) => ["--install-extension", id]),
       ],
-    });
-    await process.status();
+    }).output();
   }
 
   if (options.list) {
@@ -48,8 +46,8 @@ async function main(): Promise<void> {
 }
 
 async function getInstalledExtensions(): Promise<string[]> {
-  const extensions = await runAndReturnStdout({
-    cmd: ["codium", "--list-extensions"],
+  const extensions = await runAndReturnStdout("codium", {
+    args: ["--list-extensions"],
   });
   return extensions.trim().split("\n");
 }

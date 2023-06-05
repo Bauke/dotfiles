@@ -24,19 +24,19 @@ async function main(): Promise<void> {
 }
 
 async function gitPush(remote: string, args: string[]): Promise<void> {
-  await Deno.run({
-    cmd: [
+  await new Deno.Command("git", {
+    args: [
       "git",
       "push",
       "--follow-tags",
       remote,
       ...args,
     ],
-  }).status();
+  }).output();
 }
 
 async function gitRemote(): Promise<string[]> {
-  const output = await runAndReturnStdout({ cmd: ["git", "remote"] });
+  const output = await runAndReturnStdout("git", { args: ["remote"] });
   return output.trim().split("\n").filter((remote) => remote.length > 0);
 }
 

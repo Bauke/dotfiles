@@ -8,7 +8,7 @@ async function main(): Promise<void> {
       'Copy NixOS configuration from "$BAUKE_DIR/nix/<hostname>/" to "/etc/nixos/"',
     )
     .option("--hostname", "The machine's configuration to copy.", {
-      default: (await runAndReturnStdout({ cmd: ["hostname"] })).trim(),
+      default: (await runAndReturnStdout("hostname")).trim(),
     })
     .option("--diff", 'Output diffs between local and "/etc/nixos/" files.', {
       standalone: true,
@@ -27,29 +27,28 @@ async function main(): Promise<void> {
   if (options.diff) {
     for (const file of files) {
       const filename = file.slice(file.lastIndexOf("/") + 1);
-      await Deno.run({
-        cmd: ["delta", `/etc/nixos/${filename}`, file],
-      }).status();
+      await new Deno.Command("delta", {
+        args: [`/etc/nixos/${filename}`, file],
+      }).output();
     }
 
     return;
   }
 
-  await Deno.run({
-    cmd: [
-      "sudo",
+  await new Deno.Command("sudo", {
+    args: [
       "cp",
       "--preserve=timestamps",
       "--verbose",
       ...files,
       "/etc/nixos/",
     ],
-  }).status();
+  }).output();
 
   if (options.rebuild) {
-    await Deno.run({
-      cmd: ["sudo", "nixos-rebuild", options.rebuild],
-    }).status();
+    await new Deno.Command("sudo", {
+      args: ["nixos-rebuild", options.rebuild],
+    }).output();
   }
 }
 
