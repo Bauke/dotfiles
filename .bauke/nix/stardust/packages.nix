@@ -77,6 +77,7 @@
       tea
       temurin-bin
       transmission-gtk
+      turbo
       unstable.typst
       unstable.typst-lsp
       vscodium.fhs
