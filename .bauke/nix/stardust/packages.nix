@@ -93,6 +93,7 @@
       (wrapOBS {
         plugins = with obs-studio-plugins; [
           input-overlay
+          obs-livesplit-one
           obs-pipewire-audio-capture
           obs-source-record
           obs-vkcapture
