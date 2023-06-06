@@ -1,5 +1,6 @@
 source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
 
+export DENO_NO_UPDATE_CHECK="true"
 export EDITOR="nano"
 export LESS="-F -X $LESS"
 
