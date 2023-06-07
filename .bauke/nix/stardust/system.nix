@@ -89,4 +89,13 @@
   time = {
     timeZone = "Europe/Brussels";
   };
+
+  virtualisation = {
+    podman = {
+      enable = true;
+      defaultNetwork.settings = {
+        dns_enabled = true;
+      };
+    };
+  };
 }

@@ -55,6 +55,7 @@
       peek
       picard
       pkg-config
+      podman-compose
       pop-icon-theme
       prismlauncher
       protonup-ng
