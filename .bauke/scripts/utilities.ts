@@ -15,12 +15,13 @@ export function stringifyJsonPretty(input: unknown): string {
 
 export async function runCommand(
   command: string,
-  options: Deno.CommandOptions = {
+  options: Deno.CommandOptions = {},
+): Promise<void> {
+  await new Deno.Command(command, {
     stderr: "inherit",
     stdout: "inherit",
-  },
-): Promise<void> {
-  await new Deno.Command(command, options).output();
+    ...options,
+  }).output();
 }
 
 export async function runAndReturnStdout(
