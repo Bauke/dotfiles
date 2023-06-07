@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { pathExists } from "./utilities.ts";
+import { pathExists, runCommand } from "./utilities.ts";
 
 const hiddenApi = "http://127.0.0.1:7813";
 const remoteApi = "http://127.0.0.1:7814/api1";
@@ -96,9 +96,9 @@ async function getStatus(): Promise<Status> {
 
 async function notifyCurrentSong(): Promise<void> {
   const status = await getStatus();
-  await new Deno.Command("notify-send", {
+  await runCommand("notify-send", {
     args: [status.title, status.artist],
-  }).output();
+  });
 }
 
 if (import.meta.main) {

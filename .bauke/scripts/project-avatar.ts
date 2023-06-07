@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { pathExists } from "./utilities.ts";
+import { pathExists, runCommand } from "./utilities.ts";
 
 async function main(): Promise<void> {
   const { args, options } = await new Command()
@@ -30,7 +30,7 @@ async function main(): Promise<void> {
     }
   }
 
-  await new Deno.Command("gegl", {
+  await runCommand("gegl", {
     args: [
       "-o",
       file,
@@ -42,14 +42,14 @@ async function main(): Promise<void> {
         width: options.width,
       }),
     ],
-  }).output();
+  });
 
   if (!await pathExists(file)) {
     console.log("Something went wrong with GEGL.");
     Deno.exit(1);
   }
 
-  await new Deno.Command("convert", {
+  await runCommand("convert", {
     args: [
       file,
       "-background",
@@ -60,10 +60,10 @@ async function main(): Promise<void> {
       `${options.width}x${options.height}`,
       file,
     ],
-  }).output();
+  });
 
   if (options.clean) {
-    await new Deno.Command("mat2", { args: ["--inplace", file] }).output();
+    await runCommand("mat2", { args: ["--inplace", file] });
   }
 }
 

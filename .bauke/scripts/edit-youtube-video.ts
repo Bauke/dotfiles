@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { tomlFrontmatter } from "./utilities.ts";
+import { runCommand, tomlFrontmatter } from "./utilities.ts";
 
 type Frontmatter = {
   page_title: string;
@@ -49,7 +49,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  await new Deno.Command("youtube3", {
+  await runCommand("youtube3", {
     args: [
       "videos",
       "update",
@@ -62,7 +62,7 @@ async function main(): Promise<void> {
       "-r",
       `snippet.title=${title}`,
     ],
-  }).output();
+  });
 }
 
 function formatDescription(frontmatter: Frontmatter): string {

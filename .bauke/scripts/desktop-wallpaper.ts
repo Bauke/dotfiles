@@ -1,4 +1,5 @@
 import { Command } from "./dependencies.ts";
+import { runCommand } from "./utilities.ts";
 
 const imagePath = new URL("../data/wallpaper.jpg", import.meta.url).pathname;
 
@@ -41,15 +42,15 @@ async function main(): Promise<void> {
 }
 
 async function downloadImage(url: string): Promise<void> {
-  await new Deno.Command("curl", {
+  await runCommand("curl", {
     args: ["-fsLS", url, "-o", imagePath],
-  }).output();
+  });
 }
 
 async function setWallpaper(file: string = imagePath): Promise<void> {
   const monitors = ["monitorHDMI-0", "monitorHDMI-1"];
   for (const monitor of monitors) {
-    await new Deno.Command("xfconf-query", {
+    await runCommand("xfconf-query", {
       args: [
         "-c",
         "xfce4-desktop",
@@ -58,7 +59,7 @@ async function setWallpaper(file: string = imagePath): Promise<void> {
         "-s",
         file,
       ],
-    }).output();
+    });
   }
 }
 

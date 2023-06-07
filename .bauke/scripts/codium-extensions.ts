@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { runAndReturnStdout } from "./utilities.ts";
+import { runAndReturnStdout, runCommand } from "./utilities.ts";
 
 async function main(): Promise<void> {
   const { options } = await new Command()
@@ -21,11 +21,11 @@ async function main(): Promise<void> {
 
   if (options.install) {
     const extensions = await getSavedExtensions(options.file);
-    await new Deno.Command("codium", {
+    await runCommand("codium", {
       args: [
         ...extensions.flatMap((id) => ["--install-extension", id]),
       ],
-    }).output();
+    });
   }
 
   if (options.list) {

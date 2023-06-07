@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { runAndReturnStdout } from "./utilities.ts";
+import { runAndReturnStdout, runCommand } from "./utilities.ts";
 
 async function main(): Promise<void> {
   const { args } = await new Command()
@@ -24,14 +24,14 @@ async function main(): Promise<void> {
 }
 
 async function gitPush(remote: string, args: string[]): Promise<void> {
-  await new Deno.Command("git", {
+  await runCommand("git", {
     args: [
       "push",
       "--follow-tags",
       remote,
       ...args,
     ],
-  }).output();
+  });
 }
 
 async function gitRemote(): Promise<string[]> {

@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { runAndReturnStdout } from "./utilities.ts";
+import { runAndReturnStdout, runCommand } from "./utilities.ts";
 
 async function main(): Promise<void> {
   const { options } = await new Command()
@@ -27,15 +27,15 @@ async function main(): Promise<void> {
   if (options.diff) {
     for (const file of files) {
       const filename = file.slice(file.lastIndexOf("/") + 1);
-      await new Deno.Command("delta", {
+      await runCommand("delta", {
         args: [`/etc/nixos/${filename}`, file],
-      }).output();
+      });
     }
 
     return;
   }
 
-  await new Deno.Command("sudo", {
+  await runCommand("sudo", {
     args: [
       "cp",
       "--preserve=timestamps",
@@ -43,12 +43,12 @@ async function main(): Promise<void> {
       ...files,
       "/etc/nixos/",
     ],
-  }).output();
+  });
 
   if (options.rebuild) {
-    await new Deno.Command("sudo", {
+    await runCommand("sudo", {
       args: ["nixos-rebuild", options.rebuild],
-    }).output();
+    });
   }
 }
 
