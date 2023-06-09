@@ -13,7 +13,7 @@
       catppuccin-cursors
       chromium
       clang
-      # clonehero
+      clonehero
       conky
       delta
       deno
