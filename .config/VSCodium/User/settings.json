@@ -94,6 +94,8 @@
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
+  // Rust Analyzer (ID: rust-lang.rust-analyzer)
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
   // Stylelint (ID: stylelint.vscode-stylelint)
   "stylelint.validate": [
     "css",
