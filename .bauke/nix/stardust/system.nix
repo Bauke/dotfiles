@@ -97,5 +97,9 @@
         dns_enabled = true;
       };
     };
+
+    virtualbox = {
+      host.enable = true;
+    };
   };
 }

@@ -82,6 +82,7 @@
       turbo
       typst
       typst-lsp
+      vagrant
       vscodium.fhs
       xarchiver
       xclip

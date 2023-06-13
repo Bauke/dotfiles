@@ -8,7 +8,7 @@
 
     users.bauke = {
       description = "Bauke";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "vboxusers" "wheel" ];
       isNormalUser = true;
     };
   };
