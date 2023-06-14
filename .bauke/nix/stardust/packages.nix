@@ -22,6 +22,7 @@
       dotenv-linter
       dupeguru
       eclipses.eclipse-java
+      element-desktop
       exa
       fd
       ffmpeg
