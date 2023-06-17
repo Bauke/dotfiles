@@ -15,7 +15,7 @@ async function main(): Promise<void> {
     Deno.exit(0);
   }
 
-  const remotesToPush = ["origin", "github"];
+  const remotesToPush = ["origin", "github", "gitlab"];
   for (const remote of availableRemotes) {
     if (remotesToPush.includes(remote)) {
       await gitPush(remote, args);
