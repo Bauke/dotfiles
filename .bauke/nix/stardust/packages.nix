@@ -9,7 +9,6 @@
       apngasm
       bat
       bottom
-      caddy
       calibre
       catppuccin-cursors
       chromium
