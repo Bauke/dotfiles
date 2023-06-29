@@ -62,7 +62,9 @@
       prismlauncher
       protonup-ng
       protonvpn-gui
-      python310Packages.pipx
+      python311Packages.argcomplete
+      python311Packages.pip
+      python311Packages.pipx
       qalculate-gtk
       ranger
       restic
