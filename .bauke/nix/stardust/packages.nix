@@ -32,6 +32,7 @@
       gegl
       gimp
       git
+      git-lfs
       handbrake
       hexyl
       imagemagick
