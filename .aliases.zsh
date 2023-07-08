@@ -16,6 +16,7 @@ alias pc="podman-compose"
 alias tar-extract="tar -x -f"
 alias tar-list="tar -t -f"
 alias trash="gio trash"
+alias v="vagrant"
 alias weather="wthrr"
 alias yt-dlp-audio="yt-dlp -x --ignore-config"
 
