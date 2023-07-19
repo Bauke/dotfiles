@@ -33,6 +33,7 @@
       gimp
       git
       git-lfs
+      glab
       handbrake
       hexyl
       imagemagick
