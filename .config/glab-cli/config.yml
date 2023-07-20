@@ -1,0 +1,13 @@
+git_protocol: ssh
+editor:
+browser: firefox
+glamour_style: dark
+check_update: false
+display_hyperlinks: false
+host: gitlab.com
+no_prompt: false
+hosts:
+    gitlab.com:
+        api_protocol: https
+        api_host: gitlab.com
+        token:
