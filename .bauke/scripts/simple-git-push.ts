@@ -12,7 +12,7 @@ async function main(): Promise<void> {
 
   if (availableRemotes.length === 0) {
     console.log("No remotes found");
-    Deno.exit(0);
+    return;
   }
 
   const remotesToPush = ["origin", "github", "gitlab"];
