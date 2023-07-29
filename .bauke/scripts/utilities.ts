@@ -33,6 +33,30 @@ export async function runAndReturnStdout(
   return new TextDecoder().decode(stdout);
 }
 
+/**
+ * Parse the TOML frontmatter of a string, throwing an error if there is no
+ * frontmatter or returning the parsed frontmatter with the remaining text
+ * string. For example the following snippet:
+ *
+ * ```txt
+ * ---toml
+ * example_value = "Hello, world!"
+ * ---
+ *
+ * # Markdown
+ * ```
+ *
+ * Will return:
+ *
+ * ```js
+ * [
+ *   {
+ *     example_value: "Hello, world!"
+ *   },
+ *   "# Markdown\n"
+ * ]
+ * ```
+ */
 export function tomlFrontmatter<T>(
   data: string,
 ): [T, string] {
