@@ -1,5 +1,8 @@
 import { toml } from "./dependencies.ts";
 
+/**
+ * Check if a path exists by running {@linkcode Deno.stat} on it.
+ */
 export async function pathExists(path: string): Promise<boolean> {
   try {
     await Deno.stat(path);
@@ -9,10 +12,16 @@ export async function pathExists(path: string): Promise<boolean> {
   }
 }
 
+/**
+ * Run `JSON.stringify` with 2 spaces of indentation.
+ */
 export function stringifyJsonPretty(input: unknown): string {
   return JSON.stringify(input, null, 2);
 }
 
+/**
+ * Run a command with by default inherited `stderr` and `stdout`.
+ */
 export async function runCommand(
   command: string,
   options: Deno.CommandOptions = {},
@@ -24,6 +33,9 @@ export async function runCommand(
   }).output();
 }
 
+/**
+ * Run a command and return its `stdout` output.
+ */
 export async function runAndReturnStdout(
   command: string,
   options: Deno.CommandOptions = {},
