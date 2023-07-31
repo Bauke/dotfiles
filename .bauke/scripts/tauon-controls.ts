@@ -79,6 +79,7 @@ async function main(): Promise<void> {
   }
 }
 
+/** The status data from Tauon's remote API. */
 type Status = {
   album: string;
   artist: string;
@@ -90,10 +91,12 @@ type Status = {
   };
 };
 
+/** Get the {@linkcode Status} from Tauon's remote API. */
 async function getStatus(): Promise<Status> {
   return await (await fetch(`${remoteApi}/status`)).json();
 }
 
+/** Run a `notify-send` with the current song's artist and title. */
 async function notifyCurrentSong(): Promise<void> {
   const status = await getStatus();
   await runCommand("notify-send", {
