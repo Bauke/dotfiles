@@ -23,6 +23,7 @@ async function main(): Promise<void> {
   }
 }
 
+/** Run `git push <remote> <...args>`. */
 async function gitPush(remote: string, args: string[]): Promise<void> {
   await runCommand("git", {
     args: [
@@ -34,6 +35,7 @@ async function gitPush(remote: string, args: string[]): Promise<void> {
   });
 }
 
+/** Run `git remote` and return all the remote names as an array. */
 async function gitRemote(): Promise<string[]> {
   const output = await runAndReturnStdout("git", { args: ["remote"] });
   return output.trim().split("\n").filter((remote) => remote.length > 0);
