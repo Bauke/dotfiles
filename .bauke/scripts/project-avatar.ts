@@ -67,6 +67,7 @@ async function main(): Promise<void> {
   }
 }
 
+/** Customizable options for the GEGL graph. */
 type GraphOptions = {
   fontSize: number;
   height: number;
@@ -74,6 +75,7 @@ type GraphOptions = {
   width: number;
 };
 
+/** Create the GEGL graph for the project avatar image. */
 function geglGraph({ fontSize, height, text, width }: GraphOptions): string[] {
   const graph = `
   gegl:text
@@ -97,6 +99,7 @@ function geglGraph({ fontSize, height, text, width }: GraphOptions): string[] {
     color=black
     length=20`;
 
+  // Replace duplicate whitespace with newlines and then split by those newlines.
   return graph.replace(/\s\s+/g, "\n").trim().split("\n");
 }
 
