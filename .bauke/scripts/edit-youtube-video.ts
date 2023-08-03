@@ -1,6 +1,7 @@
 import { Command } from "./dependencies.ts";
 import { runCommand, tomlFrontmatter } from "./utilities.ts";
 
+/** The TOML frontmatter data for each video. */
 type Frontmatter = {
   page_title: string;
   id: string;
@@ -65,6 +66,7 @@ async function main(): Promise<void> {
   });
 }
 
+/** Format the description using the video's frontmatter data. */
 function formatDescription(frontmatter: Frontmatter): string {
   let description = "See all details on my website\n";
   description += `https://bauke.xyz/v/${frontmatter.id}/\n`;
