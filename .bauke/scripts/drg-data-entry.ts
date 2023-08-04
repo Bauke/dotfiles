@@ -1,10 +1,16 @@
 import { Command, prompt } from "./dependencies.ts";
 import { stringifyJsonPretty } from "./utilities.ts";
 
+/** All the available cave complexities of missions. */
 const CaveComplexity = [1, 2, 3] as const;
+
+/** All the available cave lengths of missions. */
 const CaveLength = [1, 2, 3] as const;
+
+/** All the available hazard (difficulty) levels of missions. */
 const HazardLevel = [1, 2, 3, 4, 5] as const;
 
+/** All the different types of missions. */
 const MissionTypes = [
   "Egg Hunt",
   "Elimination",
@@ -16,6 +22,7 @@ const MissionTypes = [
   "Salvage Operation",
 ] as const;
 
+/** All the different collectables besides gold and nitra. */
 const Collectables = [
   "Barley Bulb",
   "Bismor",
@@ -31,6 +38,7 @@ const Collectables = [
   "Yeast Cone",
 ] as const;
 
+/** All the data for a finished mission. */
 type Mission = {
   "Date": string;
   "Index": number;
