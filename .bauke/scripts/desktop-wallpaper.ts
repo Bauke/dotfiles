@@ -41,12 +41,14 @@ async function main(): Promise<void> {
   }
 }
 
+/** Download the given URL and output it to {@linkcode imagePath}. */
 async function downloadImage(url: string): Promise<void> {
   await runCommand("curl", {
     args: ["-fsLS", url, "-o", imagePath],
   });
 }
 
+/** Run `xfce4-desktop` and set the background wallpaper for each monitor. */
 async function setWallpaper(file: string = imagePath): Promise<void> {
   const monitors = ["monitorHDMI-0", "monitorHDMI-1"];
   for (const monitor of monitors) {
