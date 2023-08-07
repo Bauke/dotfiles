@@ -45,6 +45,7 @@ async function main(): Promise<void> {
   }
 }
 
+/** Run `codium --list-extensions` and return all the extensions as an array. */
 async function getInstalledExtensions(): Promise<string[]> {
   const extensions = await runAndReturnStdout("codium", {
     args: ["--list-extensions"],
@@ -52,6 +53,7 @@ async function getInstalledExtensions(): Promise<string[]> {
   return extensions.trim().split("\n");
 }
 
+/** Get all the saved extensions from the codium-extensions data file. */
 async function getSavedExtensions(file: string): Promise<string[]> {
   const extensions = await Deno.readTextFile(file);
   return extensions.trim().split("\n");
