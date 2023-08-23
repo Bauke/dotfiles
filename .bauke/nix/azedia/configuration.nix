@@ -5,6 +5,7 @@
 {
   imports = [
     ./hardware-configuration.nix # Created by nixos-generate-config.
+    ./packages.nix
   ];
 
   nix = {
