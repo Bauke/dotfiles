@@ -21,4 +21,5 @@ copy-nixos-config --rebuild switch
 
 ## Systems
 
+* [Azedia](./nix/azedia/)
 * [Stardust](./nix/stardust/)
