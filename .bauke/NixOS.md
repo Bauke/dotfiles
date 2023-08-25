@@ -21,5 +21,5 @@ copy-nixos-config --rebuild switch
 
 ## Systems
 
-* [Azedia](./nix/azedia/)
-* [Stardust](./nix/stardust/)
+* [**Azedia**](./nix/azedia/), Raspberry Pi 4.
+* [**Stardust**](./nix/stardust/), main desktop.
