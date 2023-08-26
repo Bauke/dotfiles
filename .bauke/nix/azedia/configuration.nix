@@ -26,6 +26,6 @@
   };
 
   # Before changing this value read the documentation for this option!
-  # https://search.nixos.org/options?channel=22.11&show=system.stateVersion
-  system.stateVersion = "22.11";
+  # https://search.nixos.org/options?channel=23.05&show=system.stateVersion
+  system.stateVersion = "23.05";
 }
