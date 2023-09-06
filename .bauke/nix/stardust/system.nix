@@ -44,6 +44,10 @@
   };
 
   hardware = {
+    nvidia = {
+      modesetting.enable = true;
+    };
+
     opengl = {
       driSupport32Bit = true;
       enable = true;
