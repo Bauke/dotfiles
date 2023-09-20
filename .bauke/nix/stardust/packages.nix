@@ -34,6 +34,7 @@
       git
       git-lfs
       glab
+      gramps
       handbrake
       hexyl
       imagemagick
