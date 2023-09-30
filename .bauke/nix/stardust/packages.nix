@@ -7,6 +7,7 @@
     systemPackages = with pkgs; [
       airshipper
       apngasm
+      autorestic
       bat
       bottom
       calibre
