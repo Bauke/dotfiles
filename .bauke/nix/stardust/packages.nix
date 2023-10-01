@@ -20,7 +20,6 @@
       deno
       dig
       direnv
-      dotenv-linter
       dupeguru
       eclipses.eclipse-java
       element-desktop
