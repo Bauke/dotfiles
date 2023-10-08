@@ -68,7 +68,6 @@
       python311Packages.pip
       python311Packages.pipx
       qalculate-gtk
-      ranger
       restic
       resvg
       ripgrep
