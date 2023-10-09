@@ -73,7 +73,6 @@
       ripgrep
       rnix-lsp
       rustup
-      shotcut
       sqlite
       sqlitebrowser
       standardnotes
