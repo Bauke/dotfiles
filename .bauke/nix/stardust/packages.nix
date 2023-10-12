@@ -87,7 +87,6 @@
       typst-lsp
       vagrant
       vscodium.fhs
-      wireshark
       xarchiver
       xclip
       xdotool
