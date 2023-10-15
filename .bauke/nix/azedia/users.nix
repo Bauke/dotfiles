@@ -8,7 +8,7 @@
 
     users.bauke = {
       description = "Bauke";
-      extraGroups = [ "networkmanager" ];
+      extraGroups = [ "docker" "wheel" ];
       isNormalUser = true;
     };
   };

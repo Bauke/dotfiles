@@ -5,8 +5,13 @@
 {
   environment = {
     systemPackages = with pkgs; [
-      exa
+      bat
+      eza
       fd
+      git
+      kitty.terminfo
+      raspberrypi-eeprom
+      starship
     ];
   };
 }
