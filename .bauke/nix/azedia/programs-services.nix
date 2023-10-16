@@ -8,9 +8,16 @@
   };
 
   services = {
-    openssh.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns = true;
+      publish = {
+        addresses = true;
+        domain = true;
+        enable = true;
+      };
+    };
 
-    # Enable `resolved` so the `<hostname>.local` domain works.
-    resolved.enable = true;
+    openssh.enable = true;
   };
 }
