@@ -79,7 +79,20 @@
 
   networking = {
     hostName = "stardust";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      # There is an issue with NetworkManager and nameservers not being added to
+      # "/etc/resolv.conf" on `nixos-rebuild switch`, that's why they're
+      # specified twice. To make it work, right-click the NetworkManager tray
+      # icon and toggle "Enable Networking", then check "/etc/resolv.conf" that
+      # this IP is at the top.
+      insertNameservers = [
+        "192.168.0.202"
+      ];
+    };
+    nameservers = [
+      "192.168.0.202"
+    ];
   };
 
   security = {
