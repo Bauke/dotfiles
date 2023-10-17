@@ -10,6 +10,7 @@
       fd
       git
       kitty.terminfo
+      libraspberrypi
       raspberrypi-eeprom
       starship
     ];
