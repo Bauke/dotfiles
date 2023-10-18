@@ -63,6 +63,7 @@
       pop-icon-theme
       prismlauncher
       protonup-ng
+      protonvpn-cli
       protonvpn-gui
       python311Packages.argcomplete
       python311Packages.pip
