@@ -95,6 +95,7 @@
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
   // Rust Analyzer (ID: rust-lang.rust-analyzer)
+  "rust-analyzer.check.command": "clippy",
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   // Stylelint (ID: stylelint.vscode-stylelint)
   "stylelint.validate": [
