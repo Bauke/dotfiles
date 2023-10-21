@@ -21,6 +21,7 @@
       dig
       direnv
       dupeguru
+      du-dust
       eclipses.eclipse-java
       element-desktop
       exa
