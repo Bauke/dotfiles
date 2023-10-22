@@ -9,8 +9,6 @@
       efi.efiSysMountPoint = "/boot/efi";
       systemd-boot.enable = true;
     };
-
-    supportedFilesystems = [ "ntfs" ];
   };
 
   console = {
