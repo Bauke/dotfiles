@@ -7,6 +7,7 @@
     systemPackages = with pkgs; [
       airshipper
       apngasm
+      aria
       autorestic
       bat
       bottom
