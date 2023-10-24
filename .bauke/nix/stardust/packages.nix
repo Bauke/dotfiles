@@ -7,7 +7,6 @@
     systemPackages = with pkgs; [
       airshipper
       apngasm
-      aria
       autorestic
       bat
       bottom
@@ -36,6 +35,7 @@
       git
       git-lfs
       glab
+      gnome.file-roller
       gramps
       handbrake
       hexyl
