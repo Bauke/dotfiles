@@ -14,7 +14,6 @@
       catppuccin-cursors
       chromium
       clang
-      clonehero
       conky
       delta
       deno
@@ -52,6 +51,7 @@
       mat2
       mpv
       nitrogen
+      nix-output-monitor
       nodejs
       nodePackages.pnpm
       numlockx
@@ -99,6 +99,13 @@
       xfce.xfce4-whiskermenu-plugin
       xorg.libXcursor
       (callPackage ./samrewritten.nix { })
+      (unstable.clonehero.overrideAttrs ({ postInstall ? "", ... }: {
+        # Remove the built-in songs from Clone Hero.
+        postInstall = postInstall + ''
+          rm -rf "$out/share/clonehero/StreamingAssets/songs"
+          mkdir "$out/share/clonehero/StreamingAssets/songs"
+        '';
+      }))
       (wrapOBS {
         plugins = with obs-studio-plugins; [
           input-overlay
