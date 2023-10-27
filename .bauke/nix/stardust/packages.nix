@@ -9,6 +9,7 @@
       apngasm
       autorestic
       bat
+      bento4
       bottom
       calibre
       catppuccin-cursors
