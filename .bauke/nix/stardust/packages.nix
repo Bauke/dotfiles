@@ -7,7 +7,7 @@
     systemPackages = with pkgs; [
       airshipper
       apngasm
-      atuin
+      unstable.atuin
       autorestic
       bat
       bento4
