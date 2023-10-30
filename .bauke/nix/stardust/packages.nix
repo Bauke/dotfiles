@@ -78,7 +78,7 @@
       ripgrep
       rnix-lsp
       rustup
-      sqlite
+      sqlite-interactive
       sqlitebrowser
       standardnotes
       starship
