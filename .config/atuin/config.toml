@@ -1,0 +1,7 @@
+auto_sync = false
+dialect = "uk"
+update_check = false
+
+history_filter = [
+  "^yt-dlp "
+]

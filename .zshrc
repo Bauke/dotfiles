@@ -16,6 +16,7 @@ source "$HOME/.aliases.zsh"
 source "$HOME/.functions.zsh"
 source "$HOME/.zle.zsh"
 
+eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(register-python-argcomplete pipx)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
