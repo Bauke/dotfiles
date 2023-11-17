@@ -3,5 +3,6 @@ dialect = "uk"
 update_check = false
 
 history_filter = [
+  "^handbrake",
   "^yt-dlp "
 ]
