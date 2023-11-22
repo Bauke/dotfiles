@@ -33,6 +33,8 @@
       pulse.enable = true;
     };
 
+    usbmuxd.enable = true;
+
     xserver = {
       desktopManager.xfce.enable = true;
       enable = true;

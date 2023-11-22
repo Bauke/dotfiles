@@ -40,10 +40,12 @@
       gramps
       handbrake
       hexyl
+      ifuse
       imagemagick
       jq
       keepassxc
       kitty
+      libimobiledevice
       libnotify
       libreoffice
       librewolf
