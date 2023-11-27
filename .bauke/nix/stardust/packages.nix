@@ -6,6 +6,7 @@
   environment = {
     systemPackages = with pkgs; [
       airshipper
+      android-studio
       apngasm
       unstable.atuin
       autorestic
