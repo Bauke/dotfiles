@@ -25,7 +25,7 @@
       du-dust
       eclipses.eclipse-java
       element-desktop
-      exa
+      eza
       fd
       ffmpeg
       firefox

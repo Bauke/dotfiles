@@ -30,7 +30,7 @@
       };
     };
 
-    fonts = with pkgs; [
+    packages = with pkgs; [
       corefonts
       hasklig
       inter
