@@ -89,7 +89,7 @@
       tea
       temurin-bin
       transmission-gtk
-      turbo
+      # turbo
       typst
       typst-lsp
       vagrant
