@@ -56,33 +56,14 @@
   "update.mode": "none",
   "update.showReleaseNotes": false,
   /* VS Code window settings. */
+  "window.commandCenter": false,
   "window.titleBarStyle": "custom",
   /* VS Code workbench settings. */
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.enableExperiments": false,
-  "workbench.editSessions.autoResume": "off",
-  "workbench.editSessions.continueOn": "off",
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.startupEditor": "none",
   /* Extension settings. */
-  // Colorize (ID: kamikillerto.vscode-colorize).
-  "colorize.languages": [
-    "css",
-    "json",
-    "jsonc",
-    "less",
-    "postcss",
-    "sass",
-    "scss",
-    "sss",
-    "stylus",
-    "svg",
-    "xml"
-  ],
-  "colorize.include": [
-    "*.conf",
-    "*.ttheme"
-  ],
   // Crates (ID: serayuzgur.crates).
   "crates.compatibleDecorator": "✅ ${version}",
   // Live Server (ID: ritwickdey.liveserver).
@@ -90,8 +71,6 @@
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.root": "/public",
   "liveServer.settings.wait": 1000,
-  // Markdown Preview Enhanced (ID: shd101wyy.markdown-preview-enhanced).
-  "markdown-preview-enhanced.previewTheme": "github-dark.css",
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
   // Rust Analyzer (ID: rust-lang.rust-analyzer)
