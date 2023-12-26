@@ -85,6 +85,8 @@
   ],
   // SVG Preview (ID: jock.svg)
   "svg.preview.mode": "svg",
+  // Typst LSP (ID: nvarner.typst-lsp)
+  "typst-lsp.exportPdf": "never",
   // Linter XO (ID: samverschueren.linter-xo).
   "xo.format.enable": true,
   "xo.validate": [
@@ -148,6 +150,10 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "samverschueren.linter-xo",
     "editor.formatOnSave": true
+  },
+  "[typst]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
   },
   "[xml]": {
     "editor.wordWrap": "on"
