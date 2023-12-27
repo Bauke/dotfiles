@@ -73,6 +73,8 @@
   "liveServer.settings.wait": 1000,
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
+  // vscode-pdf (ID: tomoki1207.pdf)
+  "pdf-preview.default.scale": "page-fit",
   // Rust Analyzer (ID: rust-lang.rust-analyzer)
   "rust-analyzer.check.command": "clippy",
   "rust-analyzer.inlayHints.chainingHints.enable": false,
@@ -86,6 +88,7 @@
   // SVG Preview (ID: jock.svg)
   "svg.preview.mode": "svg",
   // Typst LSP (ID: nvarner.typst-lsp)
+  "typst-lsp.experimentalFormatterMode": "on",
   "typst-lsp.exportPdf": "never",
   // Linter XO (ID: samverschueren.linter-xo).
   "xo.format.enable": true,
@@ -152,6 +155,8 @@
     "editor.formatOnSave": true
   },
   "[typst]": {
+    "editor.defaultFormatter": "nvarner.typst-lsp",
+    "editor.formatOnSave": true,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
   },
