@@ -156,9 +156,7 @@
   },
   "[typst]": {
     "editor.defaultFormatter": "nvarner.typst-lsp",
-    "editor.formatOnSave": true,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 80
+    "editor.formatOnSave": true
   },
   "[xml]": {
     "editor.wordWrap": "on"
