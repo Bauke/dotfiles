@@ -1,4 +1,5 @@
 # General aliases.
+alias autorestic="autorestic -c ~/.config/autorestic.yaml"
 alias c.="codium ."
 alias cat="bat"
 alias dust="dust -bs"
