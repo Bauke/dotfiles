@@ -94,6 +94,7 @@
       typst-lsp
       vagrant
       vscodium.fhs
+      watchexec
       xarchiver
       xclip
       xdotool
