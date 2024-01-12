@@ -4,6 +4,10 @@
 
 {
   programs = {
+    adb = {
+      enable = true;
+    };
+
     gnupg = {
       agent = {
         enable = true;

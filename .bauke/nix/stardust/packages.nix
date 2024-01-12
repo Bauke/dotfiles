@@ -6,7 +6,6 @@
   environment = {
     systemPackages = with pkgs; [
       android-studio
-      android-tools
       apngasm
       unstable.atuin
       autorestic
