@@ -73,6 +73,8 @@
   "liveServer.settings.wait": 1000,
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
+  // Nix Environment Selector (ID: arrterian.nix-env-selector)
+  "nixEnvSelector.nixFile": "${workspaceRoot}/flake.nix",
   // vscode-pdf (ID: tomoki1207.pdf)
   "pdf-preview.default.scale": "page-fit",
   // Rust Analyzer (ID: rust-lang.rust-analyzer)
