@@ -79,7 +79,7 @@
       resvg
       ripgrep
       rnix-lsp
-      rustup
+      # rustup
       sqlite-interactive
       sqlitebrowser
       standardnotes
