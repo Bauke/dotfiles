@@ -11,6 +11,7 @@
       autorestic
       bat
       bento4
+      bespokesynth
       bottom
       calibre
       catppuccin-cursors
