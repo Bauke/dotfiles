@@ -35,6 +35,7 @@
       alsa.support32Bit = true;
       enable = true;
       pulse.enable = true;
+      jack.enable = true;
     };
 
     usbmuxd.enable = true;

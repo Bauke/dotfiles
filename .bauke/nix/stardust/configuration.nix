@@ -4,12 +4,15 @@
 
 {
   imports = [
+    <musnix>
     ./hardware-configuration.nix # Created by nixos-generate-config.
     ./packages.nix
     ./programs-services.nix
     ./system.nix
     ./users.nix
   ];
+
+  musnix.enable = true;
 
   nix = {
     settings.experimental-features = [ "flakes" "nix-command" ];
