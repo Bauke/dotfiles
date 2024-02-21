@@ -4,6 +4,7 @@ brunnerh.insert-unicode
 Catppuccin.catppuccin-vsc
 Catppuccin.catppuccin-vsc-icons
 denoland.vscode-deno
+eamodio.gitlens
 jnoortheen.nix-ide
 jock.svg
 mkhl.direnv
