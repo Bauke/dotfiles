@@ -5,16 +5,23 @@
 {
   environment = {
     systemPackages = with pkgs; [
+      aether-lv2
       android-studio
       apngasm
-      unstable.atuin
+      ardour
       autorestic
       bat
       bento4
       bespokesynth
+      bolliedelayxt-lv2
       bottom
+      calf
       calibre
+      carla
       catppuccin-cursors
+      ChowCentaur
+      ChowKick
+      ChowPhaser
       chromium
       clang
       conky
@@ -22,17 +29,22 @@
       deno
       dig
       direnv
-      dupeguru
+      distrho
       du-dust
+      dupeguru
       eclipses.eclipse-java
       element-desktop
+      ensemble-chorus
+      eq10q
       eza
       fd
       ffmpeg
+      fire
       firefox
       flameshot
       font-manager
       gegl
+      geonkick
       gimp
       git
       git-lfs
@@ -40,6 +52,7 @@
       gnome.file-roller
       gramps
       handbrake
+      helm
       hexyl
       ifuse
       imagemagick
@@ -48,12 +61,18 @@
       kitty
       libimobiledevice
       libnotify
+      LibreArp
+      LibreArp-lv2
       libreoffice
       librewolf
       limitcpu
       lm_sensors
+      lsp-plugins
       lutris
       mat2
+      mda_lv2
+      metersLv2
+      mod-arpeggiator-lv2
       mpv
       nitrogen
       nix-output-monitor
@@ -61,6 +80,7 @@
       nodePackages.pnpm
       numlockx
       nvitop
+      odin2
       osu-lazer
       pavucontrol
       peek
@@ -76,26 +96,37 @@
       python311Packages.pip
       python311Packages.pipx
       qalculate-gtk
+      quadrafuzz
       restic
       resvg
       ripgrep
+      rkrlv2
       rnix-lsp
-      # rustup
+      sorcer
       sqlite-interactive
       sqlitebrowser
       standardnotes
       starship
       steam
+      string-machine
+      surge-XT
+      swh_lv2
+      tap-plugins
       tauon
       tea
       temurin-bin
+      tenacity
       transmission-gtk
-      unstable.turbo
+      tunefish
       typst
       typst-lsp
+      unstable.atuin
+      unstable.turbo
       vagrant
+      vital
       vscodium.fhs
       watchexec
+      x42-plugins
       xarchiver
       xclip
       xdotool
@@ -104,6 +135,7 @@
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
       xorg.libXcursor
+      zam-plugins
       (callPackage ./samrewritten.nix { })
       (unstable.clonehero.overrideAttrs ({ postInstall ? "", ... }: {
         # Remove the built-in songs from Clone Hero.
