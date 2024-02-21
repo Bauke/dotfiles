@@ -6,6 +6,7 @@
   environment = {
     systemPackages = with pkgs; [
       aether-lv2
+      airwindows-lv2
       android-studio
       apngasm
       ardour
@@ -25,6 +26,7 @@
       chromium
       clang
       conky
+      delayarchitect
       delta
       deno
       dig
@@ -126,6 +128,7 @@
       vital
       vscodium.fhs
       watchexec
+      wolf-shaper
       x42-plugins
       xarchiver
       xclip
