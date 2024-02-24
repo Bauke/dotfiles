@@ -23,7 +23,6 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        emoji = [ "Noto Color Emoji" ];
         monospace = [ "Hasklig" "Victor Mono" "DejaVu Sans Mono" ];
         sansSerif = [ "Inter" "DejaVu Sans" ];
         serif = [ "Inter" "DejaVu Sans" ];
@@ -35,7 +34,6 @@
       hasklig
       inter
       iosevka
-      noto-fonts
       victor-mono
       (nerdfonts.override { fonts = [ "Hasklig" ]; })
     ];
