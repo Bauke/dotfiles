@@ -1,0 +1,17 @@
+configuration {
+  font: "Hasklig 12";
+  modes: "drun,run";
+  terminal: "kitty";
+
+  filebrowser {
+    directories-first: true;
+    sorting-method: "name";
+  }
+
+  timeout {
+    action: "kb-cancel";
+    delay: 0;
+  }
+}
+
+@theme "theme.rasi"

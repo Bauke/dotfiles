@@ -1,0 +1,63 @@
+set $mod Mod4
+
+font pango:Hasklig 10
+
+# Run Nitrogen to restore the desktop wallpapers.
+exec --no-startup-id nitrogen --restore
+# Start the NetworkManager tray applet.
+exec --no-startup-id nm-applet
+
+# Use Mouse+$mod to drag floating windows.
+floating_modifier $mod
+
+# Disable moving the mouse to the container when switching workspaces.
+mouse_warping none
+
+# Define names for default workspaces.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Assign workspaces to monitors.
+workspace $ws1 output HDMI-0
+workspace $ws2 output HDMI-0
+workspace $ws3 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws5 output HDMI-0
+workspace $ws6 output HDMI-1
+workspace $ws7 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
+
+# Assign gaps to specific workspaces.
+workspace $ws2 gaps inner 10
+workspace $ws3 gaps inner 10
+
+# Configuration for i3bar.
+bar {
+  output primary          # Only output to the primary display.
+  position bottom         # Position at the bottom of the screen.
+  status_command i3status # Use i3status for the status contents.
+  tray_output primary     # Show tray icons on the primary display.
+}
+
+# Assign clients to specific workspaces.
+## To figure out the class name for a client, use xprop and click on the window.
+## Example for Standard Notes: xprop | rg '^WM_CLASS'
+## > WM_CLASS(STRING) = "standard notes", "Standard Notes"
+## The first string is the instance and the second is the class.
+assign [class="tauonmb"] $ws2
+assign [class="Standard Notes"] $ws2
+assign [class="Transmission-gtk"] $ws3
+assign [class="KeePassXC"] $ws3
+
+# Include the keybinds file.
+include keybinds.conf
