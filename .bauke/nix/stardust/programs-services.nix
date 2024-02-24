@@ -41,19 +41,36 @@
     usbmuxd.enable = true;
 
     xserver = {
-      desktopManager.xfce.enable = true;
       enable = true;
       layout = "be";
       videoDrivers = [ "nvidia" ];
       xkbVariant = "";
 
+      desktopManager = {
+        xterm.enable = false;
+        xfce = {
+          enable = true;
+          enableXfwm = true;
+          noDesktop = true;
+        };
+      };
+
       displayManager = {
+        defaultSession = "xfce+i3";
         lightdm = {
           enable = true;
           extraSeatDefaults = ''
             greeter-setup-script=${pkgs.numlockx}/bin/numlockx on
           '';
         };
+      };
+
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          i3status
+          rofi
+        ];
       };
     };
   };
