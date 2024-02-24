@@ -25,7 +25,10 @@
   "extensions.ignoreRecommendations": true,
   /* VS Code files settings. */
   "files.associations": {
+    "**/i3/*": "i3",
+    "**/i3status/*": "i3",
     "*.njk": "html",
+    "*.rasi": "plaintext",
     "*.sql": "sql",
     "*.yml": "yaml"
   },
