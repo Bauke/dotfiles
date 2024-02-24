@@ -43,10 +43,10 @@ workspace $ws3 gaps inner 10
 
 # Configuration for i3bar.
 bar {
-  output primary          # Only output to the primary display.
-  position bottom         # Position at the bottom of the screen.
-  status_command i3status # Use i3status for the status contents.
-  tray_output primary     # Show tray icons on the primary display.
+  output primary             # Only output to the primary display.
+  position bottom            # Position at the bottom of the screen.
+  status_command i3status-rs # Use i3status-rust for the status contents.
+  tray_output primary        # Show tray icons on the primary display.
 }
 
 # Assign clients to specific workspaces.

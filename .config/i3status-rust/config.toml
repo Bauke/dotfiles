@@ -1,0 +1,11 @@
+[[block]]
+block = "time"
+format = "$timestamp.datetime(f:'%H:%M')"
+interval = 5
+timezone = "US/Central"
+
+[[block]]
+block = "time"
+format = "$timestamp.datetime(f:'%H:%M')"
+interval = 5
+timezone = "Europe/Brussels"
