@@ -56,6 +56,7 @@
       handbrake
       helm
       hexyl
+      hydrogen
       ifuse
       imagemagick
       jq
