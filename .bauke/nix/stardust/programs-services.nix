@@ -30,6 +30,8 @@
       nssmdns = true;
     };
 
+    picom.enable = true;
+
     pipewire = {
       alsa.enable = true;
       alsa.support32Bit = true;
