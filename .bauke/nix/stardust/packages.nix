@@ -95,6 +95,7 @@
       protonup-ng
       protonvpn-cli
       protonvpn-gui
+      python3
       python311Packages.argcomplete
       python311Packages.pip
       python311Packages.pipx
