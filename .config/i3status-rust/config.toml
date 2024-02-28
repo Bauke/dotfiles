@@ -1,3 +1,13 @@
+[icons]
+icons = "emoji"
+
+[[block]]
+block = "custom"
+command = "miniflux-unread-entries"
+format = "^icon_bell <span color='#D2B83A'>$text.pango-str()</span>"
+interval = 600
+hide_when_empty = true
+
 [[block]]
 block = "time"
 format = "$timestamp.datetime(f:'%H:%M')"

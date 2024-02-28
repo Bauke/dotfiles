@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+miniflux_api_token=$(cat $BAUKE_DIR/data/miniflux-api-tokens.json | jq -r '."unread-entries"')
+
+json=$(curl -sSL --insecure -H "X-Auth-Token: $miniflux_api_token" "https://rss.azedia.lan/v1/feeds/counters")
+
+count=$(echo $json | jq -j '.unreads | length')
+
+if [[ ! $count -eq "0" ]]; then
+  echo $count
+fi
