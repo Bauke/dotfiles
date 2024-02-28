@@ -1,5 +1,5 @@
 import { Command } from "./dependencies.ts";
-import { pathExists, runCommand } from "./utilities.ts";
+import { pathExists } from "./utilities.ts";
 
 const hiddenApi = "http://127.0.0.1:7813";
 const remoteApi = "http://127.0.0.1:7814/api1";
@@ -8,7 +8,7 @@ async function main(): Promise<void> {
   const { options } = await new Command()
     .name("tauon-controls")
     .description("Small remote control CLI for Tauon Music Box!")
-    .option("--current-song", "Send a notification with the current song.")
+    .option("--current-song", "Get the currently playing song.")
     .option("--next-song", "Play the next song.")
     .option("--play-pause", "Toggle play or pause.")
     .option("--previous-song", "Play the previous song.")
@@ -21,7 +21,7 @@ async function main(): Promise<void> {
     .parse(Deno.args);
 
   if (options.currentSong) {
-    await notifyCurrentSong();
+    await getCurrentSong();
   }
 
   if (options.nextSong) {
@@ -85,6 +85,7 @@ type Status = {
   artist: string;
   id: number;
   progress: number;
+  status: "playing" | "paused";
   title: string;
   track: {
     duration: number;
@@ -96,12 +97,14 @@ async function getStatus(): Promise<Status> {
   return await (await fetch(`${remoteApi}/status`)).json();
 }
 
-/** Run a `notify-send` with the current song's artist and title. */
-async function notifyCurrentSong(): Promise<void> {
+/** Print the current song's artist and title. */
+async function getCurrentSong(): Promise<void> {
   const status = await getStatus();
-  await runCommand("notify-send", {
-    args: [status.title, status.artist],
-  });
+  if (status.status === "paused") {
+    return;
+  }
+
+  console.log(`${status.artist} - ${status.title}`);
 }
 
 if (import.meta.main) {
