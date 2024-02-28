@@ -85,7 +85,7 @@ type Status = {
   artist: string;
   id: number;
   progress: number;
-  status: "playing" | "paused";
+  status: "playing" | "paused" | "stopped";
   title: string;
   track: {
     duration: number;
@@ -100,11 +100,9 @@ async function getStatus(): Promise<Status> {
 /** Print the current song's artist and title. */
 async function getCurrentSong(): Promise<void> {
   const status = await getStatus();
-  if (status.status === "paused") {
-    return;
+  if (status.status === "playing") {
+    console.log(`${status.artist} - ${status.title}`);
   }
-
-  console.log(`${status.artist} - ${status.title}`);
 }
 
 if (import.meta.main) {
