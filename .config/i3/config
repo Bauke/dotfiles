@@ -44,10 +44,21 @@ workspace $ws4 gaps inner 10
 
 # Configuration for i3bar.
 bar {
-  output primary             # Only output to the primary display.
-  position bottom            # Position at the bottom of the screen.
-  status_command i3status-rs # Use i3status-rust for the status contents.
-  tray_output primary        # Show tray icons on the primary display.
+  colors {
+    background #00000000
+    statusline #F2EFFF
+    separator #D2B83A
+    focused_workspace #E6DEFF #E6DEFF #1F1731
+    active_workspace #D2B83A #D2B83A #1F1731
+    inactive_workspace #2A2041 #1F1731 #E6DEFF
+    urgent_workspace #F99ADD #F99ADD #1F1731
+  }
+  i3bar_command i3bar --transparency
+  output primary
+  position bottom
+  separator_symbol "/"
+  status_command i3status-rs
+  tray_output primary
 }
 
 # Assign clients to specific workspaces.
@@ -60,5 +71,5 @@ assign [class="Standard Notes"] $ws2
 assign [class="Transmission-gtk"] $ws3
 assign [class="KeePassXC"] $ws3
 
-# Include the keybinds file.
 include keybinds.conf
+include theme.conf
