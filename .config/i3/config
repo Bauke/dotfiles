@@ -56,7 +56,7 @@ bar {
   i3bar_command i3bar --transparency
   output primary
   position bottom
-  separator_symbol "/"
+  separator_symbol "•"
   status_command i3status-rs
   tray_output primary
 }

@@ -1,10 +1,13 @@
-[icons]
-icons = "emoji"
+[icons.overrides]
+bear = "🐻"
+bell = "🔔"
+bunny = "🐇"
+music = "▶️"
 
 [[block]]
 block = "custom"
 command = "tauon-controls --current-song"
-format = "^icon_music_play $text.pango-str()"
+format = "^icon_music $text.pango-str()"
 interval = 15
 hide_when_empty = true
 
@@ -20,12 +23,12 @@ cmd = "xdg-open https://rss.azedia.lan"
 
 [[block]]
 block = "time"
-format = "$timestamp.datetime(f:'%H:%M')"
+format = "^icon_bunny $timestamp.datetime(f:'%H:%M')"
 interval = 5
 timezone = "US/Central"
 
 [[block]]
 block = "time"
-format = "$timestamp.datetime(f:'%H:%M')"
+format = "^icon_bear $timestamp.datetime(f:'%H:%M')"
 interval = 5
 timezone = "Europe/Brussels"
