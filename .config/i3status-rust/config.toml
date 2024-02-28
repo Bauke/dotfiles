@@ -14,6 +14,9 @@ command = "miniflux-unread-entries"
 format = "^icon_bell <span color='#D2B83A'>$text.pango-str()</span>"
 interval = 600
 hide_when_empty = true
+[[block.click]]
+button = "left"
+cmd = "xdg-open https://rss.azedia.lan"
 
 [[block]]
 block = "time"
