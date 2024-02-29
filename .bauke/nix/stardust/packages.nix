@@ -77,7 +77,9 @@
       metersLv2
       mod-arpeggiator-lv2
       mpv
+      nil
       nitrogen
+      unstable.nixfmt-rfc-style
       nix-output-monitor
       nodejs
       nodePackages.pnpm
