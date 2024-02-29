@@ -30,7 +30,10 @@
       nssmdns = true;
     };
 
-    picom.enable = true;
+    picom = {
+      enable = true;
+      package = pkgs.picom-next;
+    };
 
     pipewire = {
       alsa.enable = true;
