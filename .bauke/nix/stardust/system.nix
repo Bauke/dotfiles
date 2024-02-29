@@ -31,6 +31,7 @@
 
     packages = with pkgs; [
       corefonts
+      font-awesome
       hasklig
       inter
       iosevka

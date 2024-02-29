@@ -1,20 +1,20 @@
 [icons.overrides]
 bear = "🐻"
-bell = "🔔"
 bunny = "🐇"
-music = "▶️"
+circle_play = "\uf144"
+rss = "\uf09e"
 
 [[block]]
 block = "custom"
 command = "tauon-controls --current-song"
-format = "^icon_music $text.pango-str()"
+format = "^icon_circle_play $text.pango-str()"
 interval = 15
 hide_when_empty = true
 
 [[block]]
 block = "custom"
 command = "miniflux-unread-entries"
-format = "^icon_bell <span color='#D2B83A'>$text.pango-str()</span>"
+format = "^icon_rss $text.pango-str()"
 interval = 600
 hide_when_empty = true
 [[block.click]]

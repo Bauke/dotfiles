@@ -53,6 +53,7 @@ bar {
     inactive_workspace #2A2041 #1F1731 #E6DEFF
     urgent_workspace #F99ADD #F99ADD #1F1731
   }
+  font pango:Hasklig, Font Awesome 6 Free 10
   i3bar_command i3bar --transparency
   output primary
   position bottom
