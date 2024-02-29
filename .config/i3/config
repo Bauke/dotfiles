@@ -14,8 +14,8 @@ floating_modifier $mod
 mouse_warping none
 
 # Define names for default workspaces.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1:Main"
+set $ws2 "2:Tauon"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -59,6 +59,7 @@ bar {
   position bottom
   separator_symbol "•"
   status_command i3status-rs
+  strip_workspace_numbers yes
   tray_output primary
 }
 
