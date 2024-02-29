@@ -144,13 +144,21 @@
       xorg.libXcursor
       zam-plugins
       (callPackage ./samrewritten.nix { })
-      (unstable.clonehero.overrideAttrs ({ postInstall ? "", ... }: {
-        # Remove the built-in songs from Clone Hero.
-        postInstall = postInstall + ''
-          rm -rf "$out/share/clonehero/StreamingAssets/songs"
-          mkdir "$out/share/clonehero/StreamingAssets/songs"
-        '';
-      }))
+      (unstable.clonehero.overrideAttrs (
+        {
+          postInstall ? "",
+          ...
+        }:
+        {
+          # Remove the built-in songs from Clone Hero.
+          postInstall =
+            postInstall
+            + ''
+              rm -rf "$out/share/clonehero/StreamingAssets/songs"
+              mkdir "$out/share/clonehero/StreamingAssets/songs"
+            '';
+        }
+      ))
       (wrapOBS {
         plugins = with obs-studio-plugins; [
           input-overlay

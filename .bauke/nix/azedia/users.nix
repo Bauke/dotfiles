@@ -8,7 +8,10 @@
 
     users.bauke = {
       description = "Bauke";
-      extraGroups = [ "docker" "wheel" ];
+      extraGroups = [
+        "docker"
+        "wheel"
+      ];
       isNormalUser = true;
     };
   };

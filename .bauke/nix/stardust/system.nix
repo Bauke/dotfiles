@@ -23,9 +23,19 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        monospace = [ "Hasklig" "Victor Mono" "DejaVu Sans Mono" ];
-        sansSerif = [ "Inter" "DejaVu Sans" ];
-        serif = [ "Inter" "DejaVu Sans" ];
+        monospace = [
+          "Hasklig"
+          "Victor Mono"
+          "DejaVu Sans Mono"
+        ];
+        sansSerif = [
+          "Inter"
+          "DejaVu Sans"
+        ];
+        serif = [
+          "Inter"
+          "DejaVu Sans"
+        ];
       };
     };
 
@@ -83,13 +93,9 @@
       # specified twice. To make it work, right-click the NetworkManager tray
       # icon and toggle "Enable Networking", then check "/etc/resolv.conf" that
       # this IP is at the top.
-      insertNameservers = [
-        "192.168.0.202"
-      ];
+      insertNameservers = [ "192.168.0.202" ];
     };
-    nameservers = [
-      "192.168.0.202"
-    ];
+    nameservers = [ "192.168.0.202" ];
   };
 
   security = {

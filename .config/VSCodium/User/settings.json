@@ -76,6 +76,14 @@
   "liveServer.settings.wait": 1000,
   // Nix (ID: jnoortheen.nix-ide)
   "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+  "nix.serverSettings": {
+    "nil": {
+      "formatting": {
+        "command": ["nixfmt"]
+      }
+    }
+  },
   // Nix Environment Selector (ID: arrterian.nix-env-selector)
   "nixEnvSelector.nixFile": "${workspaceRoot}/flake.nix",
   // vscode-pdf (ID: tomoki1207.pdf)

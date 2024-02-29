@@ -8,7 +8,13 @@
 
     users.bauke = {
       description = "Bauke";
-      extraGroups = [ "adbusers" "networkmanager" "plugdev" "vboxusers" "wheel" ];
+      extraGroups = [
+        "adbusers"
+        "networkmanager"
+        "plugdev"
+        "vboxusers"
+        "wheel"
+      ];
       isNormalUser = true;
     };
   };

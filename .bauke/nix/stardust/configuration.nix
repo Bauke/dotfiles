@@ -1,6 +1,6 @@
 # The main configuration file.
 
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -15,7 +15,10 @@
   musnix.enable = true;
 
   nix = {
-    settings.experimental-features = [ "flakes" "nix-command" ];
+    settings.experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
   };
 
   nixpkgs = {

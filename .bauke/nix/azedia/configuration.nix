@@ -1,6 +1,6 @@
 # The main configuration file.
 
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -12,7 +12,10 @@
   ];
 
   nix = {
-    settings.experimental-features = [ "flakes" "nix-command" ];
+    settings.experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
   };
 
   nixpkgs = {

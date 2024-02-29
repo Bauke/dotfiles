@@ -1,12 +1,13 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, pkg-config
-, curl
-, glibmm
-, gtkmm3
-, steam
-, yajl
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  pkg-config,
+  curl,
+  glibmm,
+  gtkmm3,
+  steam,
+  yajl,
 }:
 
 stdenv.mkDerivation rec {
@@ -21,7 +22,13 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ curl glibmm gtkmm3 steam yajl ];
+  buildInputs = [
+    curl
+    glibmm
+    gtkmm3
+    steam
+    yajl
+  ];
 
   installFlags = [ "PREFIX=$(out)" ];
 

@@ -1,6 +1,6 @@
 # Configuration for programs and services.
 
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs = {
