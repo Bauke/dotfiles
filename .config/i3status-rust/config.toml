@@ -1,3 +1,5 @@
+double_click_delay = 250
+
 [icons.overrides]
 bear = "🐻"
 bunny = "🐇"
@@ -20,6 +22,9 @@ hide_when_empty = true
 [[block.click]]
 button = "left"
 cmd = "xdg-open https://rss.azedia.lan"
+[[block.click]]
+button = "double_left"
+update = true
 
 [[block]]
 block = "time"
