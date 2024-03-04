@@ -72,6 +72,7 @@
       lm_sensors
       lsp-plugins
       lutris
+      mangohud
       mat2
       mda_lv2
       metersLv2
