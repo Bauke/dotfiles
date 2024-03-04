@@ -23,19 +23,9 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        monospace = [
-          "Hasklig"
-          "Victor Mono"
-          "DejaVu Sans Mono"
-        ];
-        sansSerif = [
-          "Inter"
-          "DejaVu Sans"
-        ];
-        serif = [
-          "Inter"
-          "DejaVu Sans"
-        ];
+        monospace = [ "Hasklig" ];
+        sansSerif = [ "Inter" ];
+        serif = [ "Inter" ];
       };
     };
 
