@@ -5,10 +5,12 @@ Catppuccin.catppuccin-vsc
 Catppuccin.catppuccin-vsc-icons
 denoland.vscode-deno
 eamodio.gitlens
+EdwinKofler.vscode-assorted-languages
 jnoortheen.nix-ide
 jock.svg
 mkhl.direnv
 nvarner.typst-lsp
+oven.bun-vscode
 ozaki.markdown-github-dark
 pinage404.nix-extension-pack
 ritwickdey.LiveServer
