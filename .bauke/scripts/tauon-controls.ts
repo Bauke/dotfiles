@@ -101,7 +101,7 @@ async function getStatus(): Promise<Status> {
 async function getCurrentSong(): Promise<void> {
   const status = await getStatus();
   if (status.status === "playing") {
-    console.log(`${status.artist} - ${status.title}`);
+    console.log(`${status.artist} - ${status.title}`.replaceAll("&", "&amp;"));
   }
 }
 
