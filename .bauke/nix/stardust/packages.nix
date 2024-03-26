@@ -109,6 +109,7 @@
       ripgrep
       rkrlv2
       rnix-lsp
+      rofi
       sorcer
       sqlite-interactive
       sqlitebrowser
