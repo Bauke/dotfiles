@@ -52,6 +52,7 @@
       git-lfs
       glab
       gnome.file-roller
+      gnome.gucharmap
       gramps
       handbrake
       helm
@@ -93,6 +94,7 @@
       picard
       pkg-config
       podman-compose
+      polybar
       pop-icon-theme
       prismlauncher
       protonup-ng
