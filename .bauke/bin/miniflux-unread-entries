@@ -8,4 +8,6 @@ count=$(echo $json | jq -j '.unreads | length')
 
 if [[ ! $count -eq "0" ]]; then
   echo $count
+else
+  echo
 fi
