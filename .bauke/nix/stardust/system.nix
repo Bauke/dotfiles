@@ -35,6 +35,7 @@
       hasklig
       inter
       iosevka
+      noto-fonts-color-emoji
       victor-mono
       (nerdfonts.override { fonts = [ "Hasklig" ]; })
     ];
