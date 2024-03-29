@@ -51,6 +51,10 @@
       enable = true;
     };
 
+    openrazer = {
+      enable = true;
+    };
+
     opentabletdriver = {
       enable = true;
     };
