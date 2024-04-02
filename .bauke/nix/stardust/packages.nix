@@ -95,6 +95,7 @@
       pkg-config
       podman-compose
       polybar
+      polychromatic
       pop-icon-theme
       prismlauncher
       protonup-ng
