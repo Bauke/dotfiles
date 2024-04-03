@@ -88,6 +88,7 @@
       numlockx
       nvitop
       odin2
+      openrazer-daemon
       osu-lazer
       pavucontrol
       peek

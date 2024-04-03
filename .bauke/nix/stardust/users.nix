@@ -11,6 +11,7 @@
       extraGroups = [
         "adbusers"
         "networkmanager"
+        "openrazer"
         "plugdev"
         "vboxusers"
         "wheel"
