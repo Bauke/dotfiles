@@ -149,6 +149,7 @@
       xfce.xfce4-whiskermenu-plugin
       xorg.libXcursor
       zam-plugins
+      zynaddsubfx
       (callPackage ./samrewritten.nix { })
       (bespokesynth.overrideAttrs (old: {
         src = fetchFromGitHub {
