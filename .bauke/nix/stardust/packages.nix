@@ -13,7 +13,7 @@
       autorestic
       bat
       bento4
-      bespokesynth
+      # bespokesynth
       bolliedelayxt-lv2
       bottom
       calf
@@ -150,6 +150,15 @@
       xorg.libXcursor
       zam-plugins
       (callPackage ./samrewritten.nix { })
+      (bespokesynth.overrideAttrs (old: {
+        src = fetchFromGitHub {
+          owner = "BespokeSynth";
+          repo = "BespokeSynth";
+          rev = "c4eb7dd9a877cded8cc1701eb8a1dbcffc7ffcc2";
+          hash = "sha256-wfqN6Vx5hYij8Mz6Ae7frUbhdj3nxtCHfpvC2+XNAJ4=";
+          fetchSubmodules = true;
+        };
+      }))
       (unstable.clonehero.overrideAttrs (
         {
           postInstall ? "",
