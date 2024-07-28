@@ -19,6 +19,10 @@
       };
     };
 
+    kdeconnect = {
+      enable = true;
+    };
+
     thunar = {
       plugins = with pkgs.xfce; [ thunar-archive-plugin ];
     };
