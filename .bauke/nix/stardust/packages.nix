@@ -12,6 +12,7 @@
       ardour
       autorestic
       bat
+      beancount
       bento4
       # bespokesynth
       bolliedelayxt-lv2
@@ -32,13 +33,16 @@
       dig
       direnv
       distrho
+      dragonfly-reverb
       du-dust
       dupeguru
       eclipses.eclipse-java
+      eid-mw
       element-desktop
       ensemble-chorus
       eq10q
       eza
+      fava
       fd
       ffmpeg
       fire
@@ -58,6 +62,7 @@
       helm
       hexyl
       hydrogen
+      hybridreverb2
       ifuse
       imagemagick
       jq
@@ -87,6 +92,7 @@
       nodePackages.pnpm
       numlockx
       nvitop
+      obsidian
       odin2
       openrazer-daemon
       osu-lazer
@@ -112,12 +118,12 @@
       resvg
       ripgrep
       rkrlv2
-      rnix-lsp
+      # rnix-lsp
       rofi
       sorcer
       sqlite-interactive
       sqlitebrowser
-      standardnotes
+      unstable.standardnotes
       starship
       steam
       string-machine
@@ -132,12 +138,15 @@
       tunefish
       typst
       typst-lsp
+      typstyle
       unstable.atuin
       unstable.turbo
+      unifi8
       vagrant
       vital
       vscodium.fhs
       watchexec
+      wine
       wolf-shaper
       x42-plugins
       xarchiver
@@ -148,10 +157,11 @@
       xfce.xfce4-timer-plugin
       xfce.xfce4-whiskermenu-plugin
       xorg.libXcursor
+      xournalpp
       zam-plugins
       zynaddsubfx
-      (callPackage ./samrewritten.nix { })
-      (bespokesynth.overrideAttrs (old: {
+      # (callPackage ./samrewritten.nix { })
+      (bespokesynth-with-vst2.overrideAttrs (old: {
         src = fetchFromGitHub {
           owner = "BespokeSynth";
           repo = "BespokeSynth";
