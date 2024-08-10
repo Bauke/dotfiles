@@ -61,3 +61,12 @@ to-opus () {
     ffmpeg -i "$input_file" -c:a libopus -b:a 128K "$output_file"
   done
 }
+
+# Converts any given files to 128K MP3 using ffmpeg.
+# to-mp3 <file ...>
+to-mp3 () {
+  for input_file in "$@"; do
+    output_file="${input_file%.*}.mp3"
+    ffmpeg -i "$input_file" -map_metadata 0:s:a:0 -b:a 128K -y "$output_file"
+  done
+}
