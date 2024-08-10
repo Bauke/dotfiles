@@ -38,6 +38,10 @@
       nssmdns = true;
     };
 
+    flatpak = {
+      enable = true;
+    };
+
     pipewire = {
       alsa.enable = true;
       alsa.support32Bit = true;
