@@ -113,9 +113,20 @@
     "typescript",
     "typescriptreact"
   ],
+  // Tinymist Typst (ID: myriad-dreamin.tinymist)
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.exportPdf": "never",
+  // Beancount (ID: Lencerf.beancount)
+  "beancount.runFavaOnActivate": true,
+  // Beancount Formatter (ID: dongfg.vscode-beancount-formatter)
+  "beancountFormatter.currencyColumn": 80,
   /* Language-specific overrides. */
   "[astro]": {
     "editor.defaultFormatter": "samverschueren.linter-xo",
+    "editor.formatOnSave": true
+  },
+  "[beancount]": {
+    "editor.rulers": [79],
     "editor.formatOnSave": true
   },
   "[html]": {
@@ -168,7 +179,7 @@
     "editor.formatOnSave": true
   },
   "[typst]": {
-    "editor.defaultFormatter": "nvarner.typst-lsp",
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
     "editor.formatOnSave": true
   },
   "[xml]": {
