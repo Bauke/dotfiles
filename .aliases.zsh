@@ -2,6 +2,7 @@
 alias autorestic="autorestic -c ~/.config/autorestic.yaml"
 alias c.="codium ."
 alias cat="bat"
+alias code="codium"
 alias dust="dust -bs"
 alias find="fd"
 alias handbrake="HandBrakeCLI --preset-import-file $BAUKE_DIR/data/handbrake-presets.json"
