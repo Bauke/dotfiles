@@ -105,6 +105,7 @@
       polychromatic
       pop-icon-theme
       prismlauncher
+      unstable.proton-pass
       protonup-ng
       protonvpn-cli
       protonvpn-gui
@@ -130,6 +131,7 @@
       surge-XT
       swh_lv2
       tap-plugins
+      taskwarrior
       tauon
       tea
       temurin-bin
