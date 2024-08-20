@@ -14,7 +14,6 @@
       bat
       beancount
       bento4
-      # bespokesynth
       bolliedelayxt-lv2
       bottom
       calf
@@ -167,8 +166,8 @@
         src = fetchFromGitHub {
           owner = "BespokeSynth";
           repo = "BespokeSynth";
-          rev = "c4eb7dd9a877cded8cc1701eb8a1dbcffc7ffcc2";
-          hash = "sha256-wfqN6Vx5hYij8Mz6Ae7frUbhdj3nxtCHfpvC2+XNAJ4=";
+          rev = "eb55640bd946cfd63fe66bb14810b03268393af1";
+          hash = "sha256-WmERJDLcgLOPX+NhdvRJoDU/KJvLI7cyO6KpqpyWuZE=";
           fetchSubmodules = true;
         };
       }))
